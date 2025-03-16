@@ -21,6 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextSlide, 10000);
 });
 
-
 /*Init library AOS*/
 AOS.init();
