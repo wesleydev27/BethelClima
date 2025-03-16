@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços de Elétrica e Climatização</title>
+    <!-- tailwind css cdn -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!--Aos Animation-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="dark-bg text-white dark-mode" id="body">
+
+    <!-- Header -->
+    <header class="bg-[var(--darkBlue)] p-5 shadow-md sticky top-0 left-0 w-full z-50" id="header">
+        <nav class="md:max-w-6xl mx-auto flex items-center justify-between">
+            <h1 class="text-2xl font-bold">BethelClima</h1>
+            <ul class="hidden md:flex gap-6">
+                <li><a href="#sobre" class="hover:text-blue-400">Sobre</a></li>
+                <li><a href="#servicos" class="hover:text-blue-400">Serviços</a></li>
+                <li><a href="#contato" class="hover:text-blue-400">Contato</a></li>
+            </ul>
+            <div class="flex items-center gap-4">
+                <!-- Dark Mode Toggle -->
+                <button id="darkModeToggle"
+                    class="relative w-9 h-5 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                    role="switch" aria-checked="false">
+                    <span class="sr-only">Toggle</span>
+                    <span id="toggleIndicator"
+                        class="absolute left-0.5 top-0.5 w-4 h-4 rounded-full bg-white dark:bg-gray-300 transition-transform duration-300 shadow-md"></span>
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-black dark:text-white">☰<p
+                        class="text-sm absolute bottom-3 right-4 text-xs">
+                        Menu</p>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 flex flex-col items-center justify-center text-xl">
+        <button id="close-menu" class="absolute top-5 right-5 text-3xl">&times;</button>
+        <a href="#sobre" class="py-2">Sobre</a>
+        <a href="#servicos" class="py-2">Serviços</a>
+        <a href="#contato" class="py-2">Contato</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+        class="h-[600px] md:h-[800px] flex flex-col items-center justify-center text-center px-5 relative overflow-hidden">
+        <div class="carousel w-full flex flex-col items-center justify-center transition-transform duration-1000 gap-4">
+            <div class="slide w-full flex flex-col items-center justify-center absolute opacity-0">
+                <h2 class="text-4xl md:text-6xl font-bold">Especialistas em <span class="text-blue-600">Elétrica</span>
+                </h2>
+                <p class="mt-4 text-lg">Projetamos e executamos instalações elétricas com segurança e qualidade.</p>
+                <a href="#contato"
+                    class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-800 rounded-full transform hover:scale-105 duration-300 cursor-pointer pulse">
+                    Solicite um Orçamento
+                </a>
+            </div>
+            <div class="slide w-full flex flex-col items-center justify-center absolute opacity-0">
+                <h2 class="text-4xl md:text-6xl font-bold">Especialistas em <span
+                        class="text-orange-600">Climatização</span></h2>
+                <p class="mt-4 text-lg">Soluções em climatização para residências e empresas.</p>
+                <a href="#contato"
+                    class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-800 rounded-full transform hover:scale-105 duration-300 cursor-pointer pulse">
+                    Solicite um Orçamento
+                </a>
+            </div>
+            <div class="slide w-full flex flex-col items-center justify-center absolute opacity-0">
+                <h2 class="text-4xl md:text-6xl font-bold">Manutenção Preventiva</h2>
+                <p class="mt-4 text-lg">Evite problemas e aumente a vida útil dos seus equipamentos.</p>
+                <a href="#contato"
+                    class="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-800 rounded-full transform hover:scale-105 duration-300 cursor-pointer pulse">
+                    Solicite um Orçamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="py-20 px-6">
+        <h2 class="text-center text-4xl font-bold">Nossos Serviços</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">Instalações Elétricas</h3>
+                <p class="mt-2">Projetos elétricos para residências e empresas.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">Manutenção Elétrica</h3>
+                <p class="mt-2">Serviços de manutenção preventiva e corretiva.</p>
+            </div>
+            <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-semibold">Climatização</h3>
+                <p class="mt-2">Instalação e manutenção de ar-condicionado.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 text-center">
+        <h2 class="text-4xl font-bold">Entre em Contato</h2>
+        <p class="mt-4">Solicite um orçamento ou tire suas dúvidas.</p>
+        <a href="https://wa.me/seunumerodetelefone"
+            class="mt-6 px-6 py-3 bg-green-600 hover:bg-green-800 rounded-full">Fale Conosco</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-900 text-center">
+        <p>&copy; 2024 EletriClima. Todos os direitos reservados.</p>
+    </footer>
+
+    <!--Scripts js-->
+    <script src="js/menu.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/scroll.js" defer></script>
+    <script src="js/dark-mode.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
