@@ -1,0 +1,271 @@
+/* ==========================
+    Variáveis de Cores
+    ========================== */
+:root {
+    --dark-bg: #121212;
+    --dark-blue: #1a202c;
+    --dark-text: #1a202c;
+    --light-bg: #f7fafc;
+    --light-blue: #3182ce;
+    --light-text: #f7fafc;
+    --orange: #F08D15;
+    --whatsapp: #25D366;
+    --white: #ffffff;
+}
+
+/* ==========================
+    Fontes
+    ========================== */
+body,
+header,
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul li a {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ==========================
+    Comportamento de Rolagem
+    ========================== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ==========================
+    Transições Suaves
+    ========================== */
+body,
+header,
+.bg-gray-800,
+p,
+h1,
+h2,
+h3,
+a,
+#header.scrolled {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ==========================
+    Modo Escuro
+    ========================== */
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.dark-mode #header {
+    background-color: var(--dark-blue);
+    border-bottom: 1px solid var(--light-text);
+}
+
+.dark-mode #header.scrolled {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: var(--dark-text);
+    border-bottom: none;
+}
+
+.dark-mode #header.scrolled #menu-btn,
+.dark-mode #header.scrolled #menu-btn p {
+    color: var(--dark-text);
+}
+
+.dark-mode .bg-gray-800 {
+    background-color: #2d3748;
+}
+
+.dark-mode #mobile-menu {
+    background-color: rgba(18, 18, 18, 0.95);
+}
+
+.dark-mode #mobile-menu a {
+    color: inherit;
+}
+
+.dark-mode #mobile-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-blue);
+}
+
+.dark-mode footer {
+    background-color: #111827;
+    color: var(--light-text);
+}
+
+.dark-mode .slide h2,
+.dark-mode .slide p {
+    color: inherit;
+}
+
+.dark-mode #menu-btn,
+.dark-mode #close-menu {
+    color: var(--light-text);
+}
+
+.dark-mode #darkModeToggle {
+    background-color: #4a5568;
+}
+
+.dark-indicator {
+    background-color: var(--light-text);
+}
+
+/* ==========================
+    Modo Claro
+    ========================== */
+.light-mode {
+    color: var(--dark-text);
+}
+
+.light-mode #header {
+    background-color: var(--light-blue);
+    color: var(--white);
+}
+
+.light-mode #header.scrolled {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: var(--dark-text);
+}
+
+.light-mode #header.scrolled #menu-btn,
+.light-mode #header.scrolled #menu-btn p {
+    color: var(--dark-text);
+}
+
+.light-mode .bg-gray-800 {
+    background-color: #edf2f7;
+    color: var(--dark-text);
+}
+
+.light-mode #mobile-menu {
+    background-color: rgba(247, 250, 252, 0.95);
+}
+
+.light-mode #mobile-menu a {
+    color: inherit;
+}
+
+.light-mode #mobile-menu a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--dark-blue);
+}
+
+.light-mode #servicos p,
+.light-mode #contato p,
+.light-mode footer p {
+    color: var(--dark-text);
+}
+
+.light-mode footer {
+    background-color: var(--light-bg);
+}
+
+.light-mode .slide h2,
+.light-mode .slide p {
+    color: inherit;
+}
+
+.light-mode #menu-btn,
+.light-mode #close-menu {
+    color: var(--dark-text);
+}
+
+.light-mode #darkModeToggle {
+    background-color: #e2e8f0;
+}
+
+.light-indicator {
+    background-color: var(--dark-bg);
+    box-shadow: 0 0 5px rgba(49, 130, 206, 0.5);
+}
+
+/* ==========================
+    Elementos Gerais
+    ========================== */
+p {
+    color: var(--white);
+}
+
+.carousel {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#darkModeToggle {
+    transition: background-color 0.3s ease;
+}
+
+#toggleIndicator {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.bg-green-600,
+.bg-blue-600 {
+    color: var(--white) !important;
+}
+
+#menu-btn {
+    cursor: pointer;
+    font-size: 1.75rem;
+    transition: color 0.3s ease;
+}
+
+#mobile-menu {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 100;
+}
+
+#mobile-menu a {
+    display: block;
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+#close-menu {
+    cursor: pointer;
+    font-size: 2rem;
+    transition: color 0.3s ease;
+}
+
+.text-blue-600 {
+    color: var(--light-blue);
+}
+
+.text-orange-600 {
+    color: var(--orange);
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(49, 130, 206, 0.7);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(49, 130, 206, 0);
+    }
+}
