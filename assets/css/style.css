@@ -126,6 +126,12 @@ a,
     color: var(--white);
 }
 
+.light-mode #header nav ul li a:hover {
+    color: var(--dark-blue);
+}
+
+
+
 .light-mode #header.scrolled {
     background-color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -167,7 +173,7 @@ a,
 
 .light-mode .slide h2,
 .light-mode .slide p {
-    color: inherit;
+    color: var(--light-bg)
 }
 
 .light-mode #menu-btn,

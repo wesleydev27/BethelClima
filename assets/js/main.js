@@ -21,5 +21,20 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextSlide, 10000);
 });
 
+// botão de voltar ao topo
+window.addEventListener('scroll', function () {
+    const backToTopButton = document.getElementById('backToTop');
+    if (window.scrollY > 300) {
+        backToTopButton.classList.remove('hidden');
+    } else {
+        backToTopButton.classList.add('hidden');
+    }
+});
+
+// Rolar para o topo ao clicar no botão
+document.getElementById('backToTop').addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
 /*Init library AOS*/
 AOS.init();
