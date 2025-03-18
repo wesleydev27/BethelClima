@@ -5,21 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços de Elétrica e Climatização</title>
-    <!--manifest -->
-    <link rel="manifest" href="assets/js/manifest.json">
-    <!--script service worker -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
-                }, function (err) {
-                    console.log('ServiceWorker registration failed: ', err);
-                });
-            });
-        }
-    </script>
-
+    <meta name="description"
+        content="Projetos e instalações elétricas, manutenção preventiva e corretiva, instalação e manutenção de ar-condicionado.">
+    <meta name="keywords" content="elétrica, climatização, ar-condicionado, inst
+    alação elétrica, manutenção elétrica, manutenção preventiva, manutenção corretiva">
+    <meta name="author" content="BethelClima">
+    <meta name="robots" content="index, follow">
     <!-- tailwind css cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <!--Aos Animation-->
@@ -192,7 +183,7 @@
 
     <!-- Botão Voltar ao Topo -->
     <button id="backToTop"
-        class="fixed bottom-10 right-10 bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg cursor-pointer hover:bg-blue-800 hidden">
+        class="fixed bottom-10 right-12 bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg cursor-pointer hover:bg-blue-800 hidden">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-8 h-8 mx-auto">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
