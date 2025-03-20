@@ -48,6 +48,24 @@ a,
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Estilo para o carrossel */
+#carousel-marcas {
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pausa ao passar o mouse */
+#carousel-marcas:hover {
+    animation-play-state: paused;
+}
 
 /* ==========================
     Modo Escuro
