@@ -36,14 +36,9 @@ document.getElementById('backToTop').addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
- // Pausa o carrossel ao clicar
- const carousel = document.getElementById('carousel-marcas');
- carousel.addEventListener('mousedown', () => {
-     carousel.style.animationPlayState = 'paused';
- });
- carousel.addEventListener('mouseup', () => {
-     carousel.style.animationPlayState = 'running';
- });
+// Remover eventos de pausa no carrossel
+const carousel = document.getElementById('carousel-marcas');
+carousel.style.animationPlayState = 'running';
 
 /*Init library AOS*/
 AOS.init();

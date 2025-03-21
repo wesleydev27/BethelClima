@@ -109,6 +109,14 @@ a,
     color: var(--light-blue);
 }
 
+.dark-mode #marcas h2  {
+    color: var(--dark-text);
+}
+
+.dark-mode #marcas {
+    background-color: var(--light-text);
+}
+
 .dark-mode footer {
     background-color: #111827;
     color: var(--light-text);
@@ -193,6 +201,15 @@ a,
 .light-mode .slide p {
     color: var(--light-bg)
 }
+
+.light-mode #marcas {
+    background-color: var(--dark-bg);
+}
+
+.light-mode #marcas h2 {
+   color: var(--light-bg);
+}
+
 
 .light-mode #menu-btn,
 .light-mode #close-menu {
