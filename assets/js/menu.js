@@ -10,3 +10,4 @@ menuBtn.addEventListener("click", () => {
 closeMenu.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
 });
+
