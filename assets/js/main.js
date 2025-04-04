@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextSlide, 10000);
 });
 
+
+
+
+
 // botão de voltar ao topo
 window.addEventListener('scroll', function () {
     const backToTopButton = document.getElementById('backToTop');
