@@ -85,3 +85,25 @@
         transform: scale(1.1);
     }
 }
+
+/* Modo escuro */
+.dark {
+    background-color: #1a202c; /* Fundo escuro */
+    color: #f7fafc; /* Texto claro */
+}
+
+.dark .bg-gray-200 {
+    background-color: #2d3748; /* Ajuste para fundos cinza */
+}
+
+.dark .bg-gray-700 {
+    background-color: #4a5568; /* Ajuste para botões */
+}
+
+.dark .text-black {
+    color: #f7fafc; /* Texto claro */
+}
+
+.dark .bg-white {
+    background-color: #1a202c; /* Fundo escuro */
+}
