@@ -46,3 +46,25 @@ carousel.style.animationPlayState = 'running';
 
 /*Init library AOS*/
 AOS.init();
+
+//MODAL AO CLICAR EM CIMA DO faleConosco
+const openModal = document.getElementById('openModal');
+const closeModal = document.getElementById('closeModal');
+const contactModal = document.getElementById('contactModal');
+
+// Abrir o modal
+openModal.addEventListener('click', () => {
+    contactModal.classList.remove('hidden');
+});
+
+// Fechar o modal
+closeModal.addEventListener('click', () => {
+    contactModal.classList.add('hidden');
+});
+
+// Fechar o modal ao clicar fora dele
+contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+        contactModal.classList.add('hidden');
+    }
+});

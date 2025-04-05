@@ -263,15 +263,15 @@
 
 
 <!--Sobre nós-->
-<section id="sobre" class="py-16 bg-fixed bg-center bg-cover bg-no-repeat px-4 lg:px-8 relative" style="background-image: url('assets/img/marcas/bk.png');">
+<section id="sobre" class="py-22 bg-fixed bg-center bg-cover bg-no-repeat px-4 lg:px-8 relative" style="background-image: url('assets/img/marcas/bk.png');">
     
     <!-- Overlay com opacidade -->
-    <div class="absolute inset-0 bg-violet-950 opacity-80 z-0"></div>
+    <div class="absolute inset-0 bg-violet-950 opacity-85 z-0"></div>
   
-    <div class="relative z-10 md:max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+    <div class="relative z-10 md:max-w-6xl mx-auto flex flex-col items-center justify-center gap-8">
         <!-- Texto -->
-        <div class="text-white" data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="text-4xl font-bold mb-8 relative after:content-[''] after:block after:w-25 after:h-2 after:bg-yellow-500 after:mx-auto lg:after:mx-0 after:mt-2">
+        <div class="text-white text-center" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="text-4xl font-bold mb-8 relative after:content-[''] after:block after:w-25 after:h-2 after:bg-yellow-500 after:mx-auto after:mt-2">
                 Sobre Nós
             </h2>
             <p class="text-xl mb-6">
@@ -284,12 +284,6 @@
                 Seja para uma nova instalação elétrica, a manutenção do seu ar-condicionado ou a implementação de um sistema de automação inteligente, a Bethel está pronta para oferecer a solução ideal com profissionalismo e dedicação.
             </p>
         </div>
-
-        <!-- Logo -->
-        <div class="flex justify-center lg:justify-end" data-aos="fade-up" data-aos-duration="1200">
-            <img src="assets/img/about.svg" alt="Logo Bethel" 
-                 class="max-w-7xl h-auto transition-transform duration-500 transform animate-[custom-scale_2s_ease-in-out_infinite]">
-        </div>
     </div>
 </section>
 
@@ -298,11 +292,43 @@
     <section id="contato" class="py-20 text-center bg-white">
         <h2 class="text-4xl font-bold mb-2">Entre em Contato</h2>
         <p class="mb-6">Solicite seu Orçamento ou tire suas dúvidas.</p>
-        <a href="https://wa.me/seunumerodetelefone"
-            class="mt-6 px-6 py-3 text-white bg-green-600 rounded-full
-            hover:bg-green-800 cursor-pointer">Fale Conosco</a>
+        <button id="openModal" class="mt-6 px-6 py-3 text-white bg-green-600 rounded-full hover:bg-green-800 cursor-pointer">
+            Fale Conosco
+        </button>
     </section>
 
+    <!-- Modal PARA O CONTATO -->
+    <div id="contactModal" class="hidden fixed inset-0 flex items-center justify-center z-50">
+        <!-- Overlay com opacidade -->
+        <div class="absolute inset-0 bg-violet-950 opacity-85"></div>
+        
+        <!-- Conteúdo do Modal -->
+        <div class="relative bg-white  shadow-lg p-8 w-full max-w-md z-50">
+            <h3 class="text-2xl font-bold mb-4">Entre em Contato</h3>
+            <form id="contactForm">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
+                    <input type="text" id="name" name="name" class="w-full border border-gray-300  p-2" required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" class="w-full border border-gray-300  p-2" required>
+                </div>
+                <div class="mb-4">
+                    <label for="subject" class="block text-sm font-medium text-gray-700">Assunto</label>
+                    <textarea id="subject" name="subject" rows="4" class="w-full border border-gray-300  p-2" required></textarea>
+                </div>
+                <div class="flex justify-end gap-4">
+                    <button type="button" id="closeModal" class="px-4 py-2 text-black bg-gray-300 cursor-pointer hover:bg-gray-400">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="px-4 py-2 bg-green-600 text-white cursor-pointer hover:bg-green-700">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="py-10 bg-gray-200 text-black">

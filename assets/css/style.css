@@ -75,16 +75,20 @@
   }
 
   
-  /*Efito pulsar para logo no sobre nós*/
+/* Estilo para o modal NA SECTION ENTRE EM CONTATO */
+#contactModal {
+    animation: fadeIn 0.3s ease-in-out;
+}
 
-  @keyframes custom-scale {
-    0%, 100% {
-        transform: scale(1);
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-    50% {
-        transform: scale(1.1);
+    to {
+        opacity: 1;
     }
 }
+
 
 /* Modo escuro */
 .dark {
