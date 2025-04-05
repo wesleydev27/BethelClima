@@ -1,3 +1,6 @@
+/*Init library AOS*/
+AOS.init();
+
 // SLIDER com letras
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
@@ -21,10 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextSlide, 10000);
 });
 
-
-
-
-
 // botão de voltar ao topo
 window.addEventListener('scroll', function () {
     const backToTopButton = document.getElementById('backToTop');
@@ -44,8 +43,6 @@ document.getElementById('backToTop').addEventListener('click', function () {
 const carousel = document.getElementById('carousel-marcas');
 carousel.style.animationPlayState = 'running';
 
-/*Init library AOS*/
-AOS.init();
 
 //MODAL AO CLICAR EM CIMA DO faleConosco
 const openModal = document.getElementById('openModal');
@@ -60,23 +57,4 @@ openModal.addEventListener('click', () => {
 // Fechar o modal
 closeModal.addEventListener('click', () => {
     contactModal.classList.add('hidden');
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.getElementById('carousel-marcas');
-    let offset = 0;
-    const speed = 1; // A velocidade de rolagem
-    const width = carousel.offsetWidth; // Largura do contêiner
-
-    function scrollCarousel() {
-        offset += speed;
-        if (offset >= width) {
-            offset = 0;
-        }
-        carousel.style.transform = `translateX(-${offset}px)`;
-        requestAnimationFrame(scrollCarousel);
-    }
-
-    // Inicia a rolagem infinita
-    scrollCarousel();
 });
