@@ -62,9 +62,21 @@ closeModal.addEventListener('click', () => {
     contactModal.classList.add('hidden');
 });
 
-// Fechar o modal ao clicar fora dele
-contactModal.addEventListener('click', (e) => {
-    if (e.target === contactModal) {
-        contactModal.classList.add('hidden');
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('carousel-marcas');
+    let offset = 0;
+    const speed = 1; // A velocidade de rolagem
+    const width = carousel.offsetWidth; // Largura do contêiner
+
+    function scrollCarousel() {
+        offset += speed;
+        if (offset >= width) {
+            offset = 0;
+        }
+        carousel.style.transform = `translateX(-${offset}px)`;
+        requestAnimationFrame(scrollCarousel);
     }
+
+    // Inicia a rolagem infinita
+    scrollCarousel();
 });

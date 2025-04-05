@@ -28,6 +28,7 @@
 }
 
 
+
 /*SLIDE DE LETRAS COM O VIDEO*/
 .carousel {
     height: 100%;
@@ -110,4 +111,42 @@
 
 .dark .bg-white {
     background-color: #1a202c; /* Fundo escuro */
+}
+
+/* Estilo padrão do botão */
+#mobileMenuToggle {
+    color: #4a4a4a; /* Cinza escuro */
+}
+
+/* Estilo no modo dark */
+.dark #mobileMenuToggle {
+    color: #ffffff; /* Branco */
+}
+
+/* Estilo padrão do indicador */
+#toggleIndicator {
+    background-color: #ffffff; /* Branco no modo claro */
+}
+
+/* Estilo do indicador no modo dark */
+.dark #toggleIndicator {
+    background-color: #000000; /* Preto no modo dark */
+}
+
+/* Estilo padrão do botão e indicador */
+#darkModeToggle {
+    background-color: #e5e7eb; /* Cinza claro no modo claro */
+}
+
+#toggleIndicator {
+    background-color: #ffffff; /* Branco no modo claro */
+}
+
+/* Estilo no modo escuro */
+.dark #darkModeToggle {
+    background-color: #374151; /* Cinza escuro no modo escuro */
+}
+
+.dark #toggleIndicator {
+    background-color: #000000; /* Preto no modo escuro */
 }
