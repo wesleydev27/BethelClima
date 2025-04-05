@@ -15,7 +15,7 @@ if (localStorage.getItem('theme') === 'dark') {
     htmlElement.classList.add('dark');
     darkModeToggle.setAttribute('aria-checked', 'true');
     toggleIndicator.style.transform = 'translateX(100%)'; // Move a bolinha para a direita
-    logo.src = 'assets/img/logo-dark.svg'; // Altera para a logo do modo escuro
+    logo.src = 'assets/img/Logos/logo-dark.svg'; // Altera para a logo do modo escuro
 }
 
 // Alterna o modo escuro ao clicar no botão
@@ -29,11 +29,11 @@ darkModeToggle.addEventListener('click', () => {
         console.log('Modo escuro ativado');
         toggleIndicator.style.transform = 'translateX(100%)'; // Move para a direita
         localStorage.setItem('theme', 'dark');
-        logo.src = 'assets/img/logo-dark.svg'; // Altera para a logo do modo escuro
+        logo.src = 'assets/img/Logos/logo-dark.svg'; // Altera para a logo do modo escuro
     } else {
         console.log('Modo claro ativado');
         toggleIndicator.style.transform = 'translateX(0)'; // Move para a esquerda
         localStorage.setItem('theme', 'light');
-        logo.src = 'assets/img/logo-light.svg'; // Altera para a logo do modo claro
+        logo.src = 'assets/img/Logos/logo-light.svg'; // Altera para a logo do modo claro
     }
 });
