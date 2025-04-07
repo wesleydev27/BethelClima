@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está carregado
 
-    // Seleciona os elementos
+    // --- Seleção dos Elementos ---
     const darkModeToggle = document.getElementById('darkModeToggle');
     const toggleIndicator = document.getElementById('toggleIndicator');
-    const htmlElement = document.documentElement;
+    // const htmlElement = document.documentElement; // NÃO precisamos mais do htmlElement para aplicar a classe
     const logo = document.getElementById('logo');
+
+    // Seleciona os elementos do Header e Footer
+    const headerElement = document.querySelector('header'); // Assume que há uma tag <header>
+    const footerElement = document.querySelector('footer'); // Assume que há uma tag <footer>
 
     // Seleciona os novos elementos da caixa de mensagem
     const messageContainer = document.getElementById('darkModeMessageContainer');
@@ -13,39 +17,37 @@ document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está
     const confirmBtn = document.getElementById('darkModeConfirmBtn');
     const cancelBtn = document.getElementById('darkModeCancelBtn');
 
-    // Variável para guardar o estado do timeout (para cancelar se necessário)
+    // Variável para guardar o estado do timeout
     let messageTimeout = null;
 
-    // Verifica se todos os elementos essenciais foram encontrados
-    if (!darkModeToggle || !toggleIndicator || !htmlElement || !messageContainer || !messageText || !actionButtonsContainer || !confirmBtn || !cancelBtn) {
-        console.error("Erro: Um ou mais elementos essenciais do dark mode ou da caixa de mensagem não foram encontrados. Verifique os IDs no HTML.");
-        return; // Interrompe a execução se algo estiver faltando
+    // --- Verificações de Elementos Essenciais ---
+    // Essenciais para a funcionalidade do toggle e mensagem
+    if (!darkModeToggle || !toggleIndicator || !messageContainer || !messageText || !actionButtonsContainer || !confirmBtn || !cancelBtn) {
+        console.error("Erro: Um ou mais elementos essenciais do dark mode (toggle, indicador, caixa de mensagem) não foram encontrados. Verifique os IDs no HTML.");
+        return; // Interrompe a execução
     }
-    // A verificação do logo é opcional, então faremos dentro da lógica se ele existir
-    // if (!logo) {
-    //     console.warn("Aviso: Elemento da logo (ID: logo) não encontrado.");
-    // }
+    // Opcionais (alvos do tema) - Apenas avisa se não encontrar
+    if (!headerElement) {
+        console.warn("Aviso: Elemento <header> não encontrado. O tema escuro não será aplicado ao cabeçalho.");
+    }
+    if (!footerElement) {
+        console.warn("Aviso: Elemento <footer> não encontrado. O tema escuro não será aplicado ao rodapé.");
+    }
+    // Opcional (logo)
+    if (!logo) {
+        console.warn("Aviso: Elemento da logo (ID: logo) não encontrado.");
+    }
 
 
-    // --- Função para mostrar a caixa de mensagem ---
+    // --- Funções da Caixa de Mensagem (sem alterações) ---
     const showMessage = (text, showConfirmButtons = false, autoHideDelay = null) => {
-        // Limpa qualquer timeout anterior para evitar esconder a caixa prematuramente
         if (messageTimeout) {
             clearTimeout(messageTimeout);
             messageTimeout = null;
         }
-
-        messageText.textContent = text; // Define o texto da mensagem
-
-        if (showConfirmButtons) {
-            actionButtonsContainer.classList.remove('hidden'); // Mostra botões Sim/Não
-        } else {
-            actionButtonsContainer.classList.add('hidden'); // Esconde botões Sim/Não (para mensagens de status)
-        }
-
-        messageContainer.classList.remove('hidden'); // Mostra a caixa de mensagem
-
-        // Define um timeout para esconder a mensagem automaticamente (se um delay for fornecido)
+        messageText.textContent = text;
+        actionButtonsContainer.classList.toggle('hidden', !showConfirmButtons);
+        messageContainer.classList.remove('hidden');
         if (autoHideDelay && autoHideDelay > 0) {
             messageTimeout = setTimeout(() => {
                 hideMessage();
@@ -53,34 +55,41 @@ document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está
         }
     };
 
-    // --- Função para esconder a caixa de mensagem ---
     const hideMessage = () => {
         messageContainer.classList.add('hidden');
-        if (messageTimeout) { // Limpa timeout se escondermos manualmente
+        if (messageTimeout) {
             clearTimeout(messageTimeout);
             messageTimeout = null;
         }
     };
 
 
-    // --- Função para aplicar o tema (lógica principal) ---
+    // --- Função para APLICAR o tema (MODIFICADA) ---
     const applyTheme = (activateDark) => {
-        const isDarkModeNow = htmlElement.classList.toggle('dark', activateDark); // Força o estado
-        darkModeToggle.setAttribute('aria-checked', isDarkModeNow);
+        // Aplica/remove a classe .dark APENAS no header e footer
+        if (headerElement) {
+            headerElement.classList.toggle('dark', activateDark);
+        }
+        if (footerElement) {
+            footerElement.classList.toggle('dark', activateDark);
+        }
+
+        // Atualiza o estado visual do toggle e salva no localStorage
+        darkModeToggle.setAttribute('aria-checked', activateDark);
 
         let statusMessage = "";
 
-        if (isDarkModeNow) {
+        if (activateDark) {
             console.log('Modo escuro ativado');
             toggleIndicator.style.transform = 'translateX(100%)';
             localStorage.setItem('theme', 'dark');
-            if (logo) logo.src = 'assets/img/Logos/logo-dark.svg';
+            if (logo) logo.src = 'assets/img/Logos/logo-dark.svg'; // Atualiza logo se existir
             statusMessage = "Modo escuro ativado!";
         } else {
             console.log('Modo claro ativado');
             toggleIndicator.style.transform = 'translateX(0)';
             localStorage.setItem('theme', 'light');
-            if (logo) logo.src = 'assets/img/Logos/logo-light.svg';
+            if (logo) logo.src = 'assets/img/Logos/logo-light.svg'; // Atualiza logo se existir
             statusMessage = "Modo claro ativado!";
         }
 
@@ -89,33 +98,54 @@ document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está
     };
 
 
-    // --- Função para inicializar o tema na carga da página ---
+    // --- Função para INICIALIZAR o tema (MODIFICADA) ---
     const initializeTheme = () => {
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            htmlElement.classList.add('dark');
-            darkModeToggle.setAttribute('aria-checked', 'true');
-            toggleIndicator.style.transform = 'translateX(100%)';
-            if (logo) logo.src = 'assets/img/Logos/logo-dark.svg';
-        } else {
-            // Garante estado inicial claro se não for dark
-            htmlElement.classList.remove('dark');
-            darkModeToggle.setAttribute('aria-checked', 'false');
-            toggleIndicator.style.transform = 'translateX(0)';
-             if (logo) logo.src = 'assets/img/Logos/logo-light.svg';
+        const activateDark = savedTheme === 'dark'; // Determina se deve iniciar escuro
+
+        // Aplica o estado inicial ao header e footer
+        if (headerElement) {
+            headerElement.classList.toggle('dark', activateDark);
         }
+        if (footerElement) {
+            footerElement.classList.toggle('dark', activateDark);
+        }
+
+        // Define estado inicial do toggle e indicador
+        darkModeToggle.setAttribute('aria-checked', activateDark);
+        toggleIndicator.style.transform = activateDark ? 'translateX(100%)' : 'translateX(0)';
+
+        // Define logo inicial
+        if (logo) {
+            logo.src = activateDark ? 'assets/img/Logos/logo-dark.svg' : 'assets/img/Logos/logo-light.svg';
+        }
+
         // Garante que a caixa de mensagem comece escondida
         hideMessage();
     };
 
 
-    // --- Event Listener para o clique no BOTÃO TOGGLE ---
+    // --- Função Auxiliar para Checar Estado Atual ---
+    // Verifica se o modo escuro está ativo (baseado no header ou footer)
+    const isCurrentlyDark = () => {
+        if (headerElement && headerElement.classList.contains('dark')) {
+            return true;
+        }
+        if (footerElement && footerElement.classList.contains('dark')) {
+            return true; // Assume que se um está dark, o estado é dark
+        }
+        return false; // Se nenhum tiver a classe, está claro
+    };
+
+
+    // --- Event Listener para o clique no BOTÃO TOGGLE (MODIFICADO) ---
     darkModeToggle.addEventListener('click', () => {
         console.log('Botão toggle clicado!');
-        hideMessage(); // Esconde qualquer mensagem anterior ao mostrar a confirmação
+        hideMessage(); // Esconde qualquer mensagem anterior
 
-        const isCurrentlyDark = htmlElement.classList.contains('dark');
-        const confirmationMessage = isCurrentlyDark
+        // Usa a função auxiliar para checar o estado
+        const currentlyDark = isCurrentlyDark();
+        const confirmationMessage = currentlyDark
             ? "Deseja desativar o modo escuro?"
             : "Deseja ativar o modo escuro?";
 
@@ -124,18 +154,17 @@ document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está
     });
 
 
-    // --- Event Listener para o botão CONFIRMAR na caixa de mensagem ---
+    // --- Event Listener para o botão CONFIRMAR (MODIFICADO) ---
     confirmBtn.addEventListener('click', () => {
         console.log('Botão Confirmar clicado!');
-        const isCurrentlyDark = htmlElement.classList.contains('dark');
-        // A ação é o oposto do estado atual
-        const activateDark = !isCurrentlyDark;
+        // Determina a ação baseado no estado atual (usando a função auxiliar)
+        const activateDark = !isCurrentlyDark();
         hideMessage(); // Esconde a caixa de confirmação imediatamente
         applyTheme(activateDark); // Aplica a mudança de tema
     });
 
 
-    // --- Event Listener para o botão CANCELAR na caixa de mensagem ---
+    // --- Event Listener para o botão CANCELAR (sem alterações) ---
     cancelBtn.addEventListener('click', () => {
         console.log('Botão Cancelar clicado!');
         hideMessage(); // Apenas esconde a caixa de mensagem
@@ -146,3 +175,18 @@ document.addEventListener('DOMContentLoaded', () => { // Garante que o DOM está
     initializeTheme();
 
 }); // Fim do DOMContentLoaded
+
+// --- IMPORTANTE: Considerações sobre o CSS ---
+// Lembre-se que suas regras de CSS agora precisam ser mais específicas.
+// Em vez de:
+// html.dark body { background-color: #121212; }
+// html.dark .meu-componente { color: white; }
+//
+// Você precisará mirar dentro do header e footer:
+// header.dark { background-color: #333; }
+// header.dark .nav-link { color: #eee; }
+// header.dark #logo { filter: brightness(0) invert(1); /* Exemplo */ }
+//
+// footer.dark { background-color: #222; }
+// footer.dark p { color: #ccc; }
+// footer.dark a { color: lightblue; }
