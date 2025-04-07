@@ -58,28 +58,55 @@
                 <li><a href="#contato" class="hover:text-yellow-300">Contato</a></li>
             </ul>
 
-            <!-- Menu mobile -->
-            <div id="mobileMenu" class="hidden fixed inset-0 z-50 transition-opacity duration-300">
-                <div
-                    class="absolute top-0 right-0 w-3/4 h-full bg-white shadow-md transform translate-x-full transition-transform duration-300">
-                    <button id="closeMobileMenu"
-                        class="absolute top-4 right-5 text-gray-700 cursor-pointer focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <ul class="flex flex-col gap-8 mt-18 px-6 uppercase text-xl">
-                        <li><a href="#servicos"
-                                class="w-full block py-2 px-4 hover:text-yellow-300 hover:bg-sky-950">Serviços</a></li>
-                        <li><a href="#sobre"
-                                class="w-full block py-2 px-4 hover:text-yellow-300 hover:bg-sky-950">Sobre</a></li>
-                        <li><a href="#contato"
-                                class="w-full block py-2 px-4 hover:text-yellow-300 hover:bg-sky-950">Contato</a></li>
-                    </ul>
-                </div>
-            </div>
+            <!-- Menu mobile Overlay (com fundo escurecido) -->
+<div id="mobileMenu"
+class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 ease-in-out">
+<!-- O próprio overlay que escurece a página -->
+
+<!-- Menu Drawer (o painel que desliza) -->
+<div id="mobileMenuDrawer"
+    class="absolute top-0 left-0 w-full max-w-xs h-full bg-white dark:bg-gray-900 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+
+    <!-- Cabeçalho do Menu -->
+    <div class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
+        <!-- Logo (Opcional: Use o mesmo ID 'logo' se quiser que o JS o alterne, ou um novo ID) -->
+        <a href="/" class="h-10"> <!-- Ajuste href e altura se necessário -->
+            <img id="mobileMenuLogo" src="assets/img/Logos/logo-dark.svg" alt="Bethel" class="h-full w-auto">
+            <!-- Nota: Você precisará ajustar o JS para trocar este src no dark mode também, ou usar um SVG adaptável -->
+        </a>
+        <!-- Botão Fechar -->
+        <button id="closeMobileMenu" class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 p-2 -mr-2"> <!-- Adicionado padding para área de clique maior -->
+            <span class="sr-only">Fechar menu</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Itens do Menu -->
+    <ul class="flex flex-col py-4"> <!-- Removido gap, mt, px. Adicionado py -->
+        <li>
+            <a href="#servicos"
+               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+               Serviços
+            </a>
+        </li>
+        <li>
+            <a href="#sobre"
+               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+               Sobre
+            </a>
+        </li>
+        <li>
+            <a href="#contato"
+               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+               Contato
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
 
             <!-- Container Pai (ainda 'relative') -->
             <div class="flex items-center gap-4 order-3 md:order-3 relative">
