@@ -1,41 +1,81 @@
-/*AJUSTES GERAIS*/
+/* ==========================================================================
+   AJUSTES GERAIS E GLOBAIS
+   ========================================================================== */
 
-      /*SUAVIDADE DE ROLAGEM DA PAGINA*/
-      html {
-        scroll-behavior: smooth;
-    }
+/* Suavidade de rolagem da página */
+html {
+    scroll-behavior: smooth;
+}
 
-    /*<!-- ANIMAÇÃO PARA O CARROUSEL DE MARCAS-->*/
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-
-    .animate-slide {
-        animation: slide 35s linear infinite;
-    }
-
-
-/* Fontes menu dektop and mobile */
-#menu-desktop, #mobile-menu{
+/* Fontes padrão para menus */
+#menu-desktop,
+#mobile-menu {
     font-family: poppins, sans-serif;
-    font-size: 1rem;
+    font-size: 1rem; /* 16px */
 }
 
 
+/* ==========================================================================
+   ANIMAÇÕES (Keyframes e Classes de Uso)
+   ========================================================================== */
 
-/*SLIDE DE LETRAS COM O VIDEO*/
+/* --- Animação Carrossel de Marcas --- */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.animate-slide {
+    animation: slide 35s linear infinite;
+}
+
+/* --- Animação Pulse (Box Shadow) --- */
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(49, 130, 206, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 20px rgba(49, 130, 206, 0);
+    }
+}
+.pulse {
+    animation: pulse-animation 2s infinite;
+}
+
+/* --- Animação Custom Pulse (Scale) --- */
+/* Nota: Esta animação está definida, mas não parece haver uma classe .custom-pulse no CSS para usá-la. */
+@keyframes custom-pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+}
+
+/* --- Animação Fade-in para Modal --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+#contactModal { /* Aplica a animação ao modal de contato */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+
+/* ==========================================================================
+   COMPONENTES ESPECÍFICOS
+   ========================================================================== */
+
+/* --- Slide de Letras com Vídeo --- */
 .carousel {
     height: 100%;
     position: relative;
     width: 100%;
 }
-
 .slide {
     left: 50%;
     opacity: 0;
@@ -44,109 +84,87 @@
     transform: translate(-50%, -50%);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
-
-.active {
+.slide.active { /* Combina o seletor para clareza */
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* --- Caixa de Diálogo do Botão Dark Mode --- */
 
-.pulse {
-    animation: pulse-animation 2s infinite;
+/* Estilo Base da Caixa (Ajuste de Margem para o Cone) */
+#darkModeMessageContainer {
+    margin-top: 1rem; /* Espaço para o cone acima */
+    /* Outros estilos (padding, background, border, shadow) são aplicados via Tailwind no HTML */
 }
 
-@keyframes pulse-animation {
-    0% {
-        box-shadow: 0 0 0 0px rgba(49, 130, 206, 0.7);
-    }
-
-    100% {
-        box-shadow: 0 0 0 20px rgba(49, 130, 206, 0);
-    }
-}
-
-
-@keyframes custom-pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-  }
-
-  
-/* Estilo para o modal NA SECTION ENTRE EM CONTATO */
-#contactModal {
-    animation: fadeIn 0.3s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Criação do Cone (Seta) via Pseudo-elemento */
+#darkModeMessageContainer::before {
+    content: '';
+    position: absolute;
+    width: 0.75rem;  /* 12px */
+    height: 0.75rem; /* 12px */
+    transform: rotate(45deg);
+    /* Posicionamento: Acima e ligeiramente à direita (ajuste 'left' conforme necessário) */
+    top: -0.375rem; /* Metade da altura do cone, para cima */
+    left: 1.5rem;  /* Posição horizontal - ajuste para alinhar com o botão toggle */
+    /* Estilos Padrão (Modo Claro) */
+    background-color: white;
+    border-top: 1px solid #e5e7eb;  /* Tailwind gray-200 */
+    border-left: 1px solid #e5e7eb; /* Tailwind gray-200 */
+    border-right: none;
+    border-bottom: none;
+    z-index: -1; /* Coloca atrás do conteúdo da caixa, mas acima do fundo dela */
 }
 
 
-/* Modo escuro */
+/* ==========================================================================
+   ESTILOS DARK MODE
+   ========================================================================== */
+
+/* --- Estilos Globais Base para Modo Escuro --- */
 .dark {
-    background-color: #1a202c; /* Fundo escuro */
-    color: #f7fafc; /* Texto claro */
+    background-color: #1a202c; /* Ex: Fundo padrão dark (gray-900/slate-900) */
+    color: #f7fafc;            /* Ex: Texto padrão claro (gray-100/slate-100) */
 }
 
-.dark .bg-gray-200 {
-    background-color: #2d3748; /* Ajuste para fundos cinza */
-}
+/* --- Sobrescritas Globais de Classes Tailwind (Usar com Cautela) --- */
+/* Recomendação: É preferível usar as variantes dark: diretamente no HTML */
+/* Ex: <div class="bg-white dark:bg-gray-800"> */
+.dark .bg-gray-200 { background-color: #2d3748; /* Ex: gray-800 */ }
+.dark .bg-gray-700 { background-color: #4a5568; /* Ex: gray-600 */ }
+.dark .text-black { color: #f7fafc; /* Ex: gray-100 */ }
+.dark .bg-white { background-color: #1a202c; /* Ex: gray-900 */ }
 
-.dark .bg-gray-700 {
-    background-color: #4a5568; /* Ajuste para botões */
-}
+/* --- Estilos Específicos de Componentes no Modo Escuro --- */
 
-.dark .text-black {
-    color: #f7fafc; /* Texto claro */
-}
-
-.dark .bg-white {
-    background-color: #1a202c; /* Fundo escuro */
-}
-
-/* Estilo padrão do botão */
-#mobileMenuToggle {
-    color: #4a4a4a; /* Cinza escuro */
-}
-
-/* Estilo no modo dark */
+/* Botão Menu Mobile */
 .dark #mobileMenuToggle {
     color: #ffffff; /* Branco */
 }
 
-/* Estilo padrão do indicador */
-#toggleIndicator {
-    background-color: #ffffff; /* Branco no modo claro */
-}
-
-/* Estilo do indicador no modo dark */
-.dark #toggleIndicator {
-    background-color: #000000; /* Preto no modo dark */
-}
-
-/* Estilo padrão do botão e indicador */
-#darkModeToggle {
-    background-color: #e5e7eb; /* Cinza claro no modo claro */
-}
-
-#toggleIndicator {
-    background-color: #ffffff; /* Branco no modo claro */
-}
-
-/* Estilo no modo escuro */
+/* Botão Dark Mode Toggle e Indicador */
 .dark #darkModeToggle {
-    background-color: #374151; /* Cinza escuro no modo escuro */
+    background-color: #374151; /* Tailwind gray-700 */
+}
+.dark #toggleIndicator {
+    /* Nota: A cor de fundo do indicador no modo escuro foi definida aqui.
+       Certifique-se que corresponde ao desejado (preto pode ser muito escuro).
+       Talvez #e5e7eb (gray-200) ou #d1d5db (gray-300) funcione melhor visualmente. */
+    background-color: #d1d5db; /* Alterado de #000000 (preto) para gray-300 - AJUSTE CONFORME GOSTO */
 }
 
-.dark #toggleIndicator {
-    background-color: #000000; /* Preto no modo escuro */
+/* Cone (Seta) da Caixa de Diálogo no Modo Escuro */
+.dark #darkModeMessageContainer::before {
+    background-color: #1f2937; /* Tailwind gray-800 (corresponde ao bg da caixa) */
+    border-top-color: #374151;   /* Tailwind gray-700 (corresponde à borda da caixa) */
+    border-left-color: #374151;    /* Tailwind gray-700 */
 }
+
+/*
+   IMPORTANTE - Cores do Texto da Caixa de Diálogo no Modo Escuro:
+   As regras abaixo NÃO existem neste CSS. Elas devem ser aplicadas
+   usando classes Tailwind diretamente no HTML:
+
+   - No <p id="darkModeMessageText">: adicione a classe `dark:text-gray-200` (ou similar)
+   - No <button id="darkModeCancelBtn">: adicione a classe `dark:text-gray-100` (ou similar)
+*/
