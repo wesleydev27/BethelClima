@@ -108,7 +108,7 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
 </div>
 </div>
 
-            <!-- Container Pai (ainda 'relative') -->
+            <!-- Container Pai MODO DARK-->
             <div class="flex items-center gap-4 order-3 md:order-3 relative">
 
                 <!-- Botão Dark Mode Toggle -->
@@ -124,8 +124,7 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
                 <div id="darkModeMessageContainer"
                     class="hidden absolute top-full right-0 mt-4 w-max max-w-xs p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 z-20"
                     role="alertdialog" aria-live="polite">
-                    <!--   ^^^^^^^ SUBSTITUÍDO left-0 POR right-0 ^^^^^^^   -->
-                    <!-- Cone será adicionado via ::before (CSS controla isso) -->
+                    
 
                     <!-- Texto com cor dark mode e tamanho ajustados -->
                     <p id="darkModeMessageText"
@@ -136,18 +135,19 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
                     <!-- Botões de ação -->
                     <div id="darkModeActionButtons" class="flex justify-end gap-2">
                         <button id="darkModeConfirmBtn"
-                            class="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-medium rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Confirmar</button>
+                            class="px-3 py-1 bg-yellow-500 hover:bg-indigo-700 text-white text-xs font-medium rounded focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Confirmar</button>
+
                         <!-- Botão Cancelar com cor dark mode confirmada -->
                         <button id="darkModeCancelBtn"
                             class="px-3 py-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-800 dark:text-gray-100 text-xs font-medium rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">Cancelar</button>
                     </div>
                 </div>
+            </div> 
+            <!-- Fim do Container Pai do botão toggle -->
 
-            </div> <!-- Fim do Container Pai do botão toggle -->
         </nav>
     </header>
 
-    <!-- O restante do seu HTML continua aqui... -->
     <!-- Slides de letras no video -->
     <section
         class="h-[600px] md:h-[750px] flex flex-col items-center justify-center text-center px-5 relative overflow-hidden">
@@ -369,45 +369,59 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
     </section>
 
     <!-- Modal PARA O CONTATO -->
-    <div id="contactModal" class="hidden fixed inset-0 flex items-center justify-center z-[60]"> <!-- Z-index maior que o header -->
-        <!-- Overlay com opacidade -->
-        <div id="modalOverlay" class="absolute inset-0 bg-violet-950 opacity-85"></div>
+<div id="contactModal" class="hidden fixed inset-0 flex items-center justify-center z-[60]"> <!-- Z-index maior que o header -->
+    <!-- Overlay com opacidade -->
+    <div id="modalOverlay" class="absolute inset-0 bg-violet-950 opacity-85"></div>
 
-        <!-- Conteúdo do Modal -->
-        <div class="relative bg-white shadow-lg p-8 w-full max-w-md z-[61] m-3 rounded-lg"> <!-- Z-index maior que o overlay -->
-            <h3 class="text-2xl font-medium text-center mb-4">Envie sua dúvida</h3>
-            <form id="contactForm" action="https://formspree.io/f/SEU_ID_FORMSPREE" method="POST"> <!-- Adicione seu ID do Formspree -->
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
-                    <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded p-2" required>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="_replyto" class="w-full border border-gray-300 rounded p-2" required> <!-- Use _replyto para o Formspree saber para onde responder -->
-                </div>
-                <div class="mb-4">
-                    <label for="subject" class="block text-sm font-medium text-gray-700">Mensagem</label>
-                    <textarea id="subject" name="message" rows="4" class="w-full border border-gray-300 rounded p-2" required></textarea>
-                </div>
-                 <!-- Campos ocultos para Formspree -->
-                 <input type="hidden" name="_subject" value="Nova Mensagem do Site BethelClima!">
-                 <input type="text" name="_gotcha" style="display:none"> <!-- Proteção anti-spam -->
 
-                <div class="flex justify-end gap-4 mt-6">
-                    <button type="button" id="closeModal"
-                        class="px-8 py-2 text-black bg-gray-300 rounded cursor-pointer hover:bg-gray-400">
-                        Cancelar
-                    </button>
-                    <button type="submit" class="px-8 py-2 bg-green-600 text-white rounded cursor-pointer hover:bg-green-700">
-                        Enviar
-                    </button>
-                </div>
-            </form>
-        </div>
+    <!-- Conteúdo E-mail do Modal -->
+    <div class="relative bg-white shadow-lg p-8 w-full max-w-md z-[61] m-3 rounded-lg"> <!-- Z-index maior que o overlay -->
+        <h3 class="text-2xl font-medium text-center mb-4">Envie sua dúvida</h3>
+
+        <!-- Adicione novalidate para desativar a validação padrão do browser -->
+        <form id="contactForm" action="https://formspree.io/f/SEU_ID_FORMSPREE" method="POST" novalidate> <!-- Adicione seu ID do Formspree -->
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
+                <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required minlength="2" maxlength="100">
+                
+                <!-- Span para exibir erro do nome -->
+                <span id="nameError" class="text-red-600 text-sm mt-1 hidden"></span>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="_replyto" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required> <!-- Use _replyto para o Formspree saber para onde responder -->
+
+                 <!-- Span para exibir erro do email -->
+                <span id="emailError" class="text-red-600 text-sm mt-1 hidden"></span>
+            </div>
+            <div class="mb-4">
+                <!-- Ajustado label for, id e name para "message" -->
+                <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required minlength="10" maxlength="500"></textarea>
+                 <!-- Span para exibir erro da mensagem -->
+                <span id="messageError" class="text-red-600 text-sm mt-1 hidden"></span>
+            </div>
+             <!-- Campos ocultos para Formspree -->
+             <input type="hidden" name="_subject" value="Nova Mensagem do Site BethelClima!">
+             <input type="text" name="_gotcha" style="display:none"> <!-- Proteção anti-spam -->
+
+            <div class="flex justify-end gap-4 mt-6">
+                <button type="button" id="closeModal"
+                    class="px-8 py-2 text-black bg-gray-300 rounded cursor-pointer hover:bg-gray-400">
+                    Cancelar
+                </button>
+                <button type="submit" id="submitButton" class="px-8 py-2 bg-green-600 text-white rounded cursor-pointer hover:bg-green-700">
+                    Enviar
+                </button>
+            </div>
+            <!-- Mensagem de status do formulário -->
+            <p id="formStatus" class="text-center mt-4 text-sm"></p>
+        </form>
     </div>
+</div>
 
 <!-- Footer -->
-<footer class="pt-10 bg-gray-200 text-black relative"> <!-- REMOVIDO pb-20, ADICIONADO relative (para garantir contexto se necessário, embora não estritamente para este caso) -->
+<footer class="pt-10 bg-gray-200 text-black relative">
     <div class="md:max-w-6xl mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Sobre -->
         <div>
@@ -438,8 +452,8 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
         </div>
     </div>
 
-    <!-- Div de Copyright (SEM posicionamento absoluto) -->
-    <div class="mt-10 p-4 text-white w-full text-center text-xs bg-sky-950"> <!-- REMOVIDO absolute, bottom-0, left-0. ADICIONADO mt-10 para espaço ACIMA -->
+    <!-- Div de Copyright-->
+    <div class="mt-10 p-4 text-white w-full text-center text-xs bg-sky-950">
         © 2024 BethelClima. Todos os direitos reservados. Desenvolvido por <a href="" target="_blank" class="underline hover:text-yellow-300">Wesley Vaz</a>.
     </div>
 </footer>
@@ -455,7 +469,7 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
 
     <!-- Botão Voltar ao Topo -->
     <button id="backToTop"
-        class="fixed bottom-10 right-4 bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg cursor-pointer hover:bg-blue-800 hidden pulse z-50"> <!-- Adicionado Z-index -->
+        class="fixed bottom-10 right-4 bg-blue-600 text-white w-10 h-10 rounded-full shadow-lg cursor-pointer hover:bg-blue-800 hidden pulse z-50">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-8 h-8 mx-auto">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
@@ -467,9 +481,6 @@ class="hidden fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 eas
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/dark-mode.js" defer></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init(); // Inicializa a biblioteca AOS
-    </script>
 
 </body>
 
