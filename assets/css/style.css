@@ -161,7 +161,7 @@ html {
 /* Recomendação: É preferível usar as variantes dark: diretamente no HTML */
 /* Ex: <div class="bg-white dark:bg-gray-800"> */
 .dark .bg-gray-200 {
-    background-color: #b8b9ba;
+    background-color: #2d3748;
     /* Ex: gray-800 */
 }
 
@@ -176,7 +176,7 @@ html {
 }
 
 .dark .bg-white {
-    background-color: #ffffff;
+    background-color: #1a202c;
     /* Ex: gray-900 */
 }
 
