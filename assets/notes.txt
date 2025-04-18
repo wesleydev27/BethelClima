@@ -1,0 +1,58 @@
+<!-- Contato 
+  <section id="contato" class="py-20 text-center bg-white">
+    <h2 class="text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1900">Entre em Contato</h2>
+    <p class="mb-6" data-aos="fade-up" data-aos-duration="3000">Solicite seu Orçamento ou tire suas dúvidas.</p>
+    <button id="openModal"
+        class="mt-6 px-6 py-3 text-white bg-green-600 rounded-full hover:bg-green-800 cursor-pointer"
+        data-aos="fade-up" data-aos-duration="3000">
+        Fale Conosco
+    </button>
+</section>
+
+  Modal PARA O CONTATO 
+ <div id="contactModal" class="hidden fixed inset-0 flex items-center justify-center z-[60]">
+    <div id="modalOverlay" class="absolute inset-0 bg-violet-950 opacity-85"></div>
+    <div class="relative bg-white shadow-lg p-8 w-full max-w-md z-[61] m-3 rounded-lg">
+        <h3 class="text-2xl font-medium text-center mb-4">Envie sua dúvida</h3>
+
+        <!-- *** ATUALIZE O ACTION COM SEU FORM ID REAL *** 
+        <form id="contactForm" action="https://formspree.io/f/6LeqEA0rAAAAAHHvSuUAgcOnuWte87EcNGq0JbqI" method="POST" novalidate>
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
+                <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required minlength="2" maxlength="100">
+                <span id="nameError" class="text-red-600 text-sm mt-1 hidden"></span>
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="_replyto" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required>
+                <span id="emailError" class="text-red-600 text-sm mt-1 hidden"></span>
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required minlength="10" maxlength="500"></textarea>
+                <span id="messageError" class="text-red-600 text-sm mt-1 hidden"></span>
+            </div>
+
+            < Recapcha key--
+            <div class="mb-4">
+            
+                <div class="g-recaptcha" data-sitekey="6LeqEA0rAAAAAG7hyDz0gwFben9hVKIil-D0lgbk"></div>
+                <span id="recaptchaError" class="text-red-600 text-sm mt-1 hidden"></span>  Span para erro do reCAPTCHA 
+            </div> -->
+
+            <!-- Campos ocultos para Formspree -
+            <input type="hidden" name="_subject" value="Nova Mensagem do Site BethelClima!">
+            <input type="text" name="_gotcha" style="display:none">
+
+            <div class="flex justify-end gap-4 mt-6">
+                <button type="button" id="closeModal" class="px-8 py-2 text-black bg-gray-300 rounded cursor-pointer hover:bg-gray-400">
+                    Cancelar
+                </button>
+                <button type="submit" id="submitButton" class="px-8 py-2 bg-green-600 text-white rounded cursor-pointer hover:bg-green-700">
+                    Enviar
+                </button>
+            </div>
+            <p id="formStatus" class="text-center mt-4 text-sm"></p>
+        </form>
+    </div>
+</div> -->

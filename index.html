@@ -38,7 +38,7 @@
     <header class="bg-white text-black shadow-md sticky top-0 left-0 w-full h-18 z-50" id="header">
 
         <!--Menu nav-->
-        <nav class="md:max-w-6xl mx-auto flex items-center justify-between px-4 py-2" >
+        <nav class="md:max-w-6xl mx-auto flex items-center justify-between py-2" >
 
             <!--Logo-->
             <h1 class=" mx-auto md:mx-0 order-2 md:order-2">
@@ -47,7 +47,7 @@
             </h1>
 
             <!-- Botão para abrir o menu mobile -->
-            <button id="mobileMenuToggle" class="md:hidden text-gray-700 focus:outline-none cursor-pointer">
+            <button id="mobileMenuToggle" class="md:hidden text-gray-700 focus:outline-none cursor-pointer px-2 py-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -128,7 +128,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
 </div>
 
             <!-- Container Pai MODO DARK-->
-            <div class="flex items-center gap-4 order-3 md:order-3 relative">
+            <div class="flex items-center px-2 py-2  gap-4 order-3 md:order-3 relative">
 
                 <!-- Botão Dark Mode Toggle -->
                 <button id="darkModeToggle"
@@ -303,14 +303,14 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
     <div class="absolute inset-0 bg-sky-950 opacity-90"></div>
 
     <!-- Container Principal -->
-    <div class="container mx-auto px-4 relative z-10" id="fechaduras">
+    <div class="max-w-6xl mx-auto px-4 relative z-10" id="fechaduras">
         <!-- Layout Flexível -->
         <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
 
             <!-- Coluna do Texto e Botões -->
             <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
             <div class="w-full md:w-1/2 text-center md:text-left"
-                 data-aos="fade-left"
+                 data-aos="fade-down"
                  data-aos-duration="1000">
                 <!-- Título Responsivo -->
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -396,7 +396,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
             <!-- Coluna do Texto e Botões -->
             <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
             <div class="w-full md:w-1/2 text-center md:text-left"
-                 data-aos="fade-left"
+                 data-aos="fade-up"
                  data-aos-duration="1000">
                 <!-- Título Responsivo -->
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">
@@ -459,7 +459,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
     <div class="absolute inset-0 bg-green-950 opacity-90"></div>
 
     <!-- Container Principal -->
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
         <!-- Layout Flexível -->
         <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
 
@@ -537,7 +537,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
     <div class="absolute inset-0 bg-yellow-700 opacity-90"></div>
 
     <!-- Container Principal -->
-    <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
         <!-- Layout Flexível -->
         <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
 
@@ -606,7 +606,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
 
     <!-- Seção de Serviços Elétricos -->
 <section id="eletrica" class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row items-center md:space-x-12">
 
             <!-- Coluna da Imagem -->
@@ -696,7 +696,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
 
 <!-- Seção de Serviços de Automação -->
 <section id="automacao" class="py-16 bg-white "> <!-- Adicionado dark:bg-gray-900 para fundo escuro -->
-    <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse">
 
             <!-- Coluna da Imagem -->
@@ -787,7 +787,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
 
 <!-- Seção de Serviços de Climatização -->
 <section id="climatizacao" class="py-16 bg-gray-50"> <!-- Voltando para bg-gray-50 para alternar -->
-    <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row items-center md:space-x-12">
             <!-- Voltando para md:flex-row (imagem à esquerda) -->
 
@@ -883,7 +883,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
             data-aos="fade-up" data-aos-duration="1000">
             Trabalhamos com as Melhores Marcas
         </h2>
-        <div class="overflow-hidden whitespace-nowrap md:max-w-6xl mx-auto px-6 lg:px-20">
+        <div class="overflow-hidden whitespace-nowrap md:max-w-6xl mx-auto px-4 relative z-10 lg:px-20">
             <div id="carousel-marcas" class="flex gap-8 animate-slide">
                 <!-- Repita as imagens para criar o loop visual contínuo -->
                 <img src="assets/img/marcas/alumbra.png" alt="Alumbra" class="w-30 object-contain">
@@ -940,66 +940,6 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
             </div>
         </div>
     </section>
-
-
-    <!-- Contato -->
-    <section id="contato" class="py-20 text-center bg-white">
-        <h2 class="text-4xl font-bold mb-2" data-aos="fade-up" data-aos-duration="1900">Entre em Contato</h2>
-        <p class="mb-6" data-aos="fade-up" data-aos-duration="3000">Solicite seu Orçamento ou tire suas dúvidas.</p>
-        <button id="openModal"
-            class="mt-6 px-6 py-3 text-white bg-green-600 rounded-full hover:bg-green-800 cursor-pointer"
-            data-aos="fade-up" data-aos-duration="3000">
-            Fale Conosco
-        </button>
-    </section>
-
-     <!-- Modal PARA O CONTATO -->
-     <div id="contactModal" class="hidden fixed inset-0 flex items-center justify-center z-[60]">
-        <div id="modalOverlay" class="absolute inset-0 bg-violet-950 opacity-85"></div>
-        <div class="relative bg-white shadow-lg p-8 w-full max-w-md z-[61] m-3 rounded-lg">
-            <h3 class="text-2xl font-medium text-center mb-4">Envie sua dúvida</h3>
-
-            <!-- *** ATUALIZE O ACTION COM SEU FORM ID REAL *** -->
-            <form id="contactForm" action="https://formspree.io/f/6LeqEA0rAAAAAHHvSuUAgcOnuWte87EcNGq0JbqI" method="POST" novalidate>
-                <div class="mb-4">
-                    <label for="name" class="block text-sm font-medium text-gray-700">Nome</label>
-                    <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required minlength="2" maxlength="100">
-                    <span id="nameError" class="text-red-600 text-sm mt-1 hidden"></span>
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="_replyto" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required>
-                    <span id="emailError" class="text-red-600 text-sm mt-1 hidden"></span>
-                </div>
-                <div class="mb-4">
-                    <label for="message" class="block text-sm font-medium text-gray-700">Mensagem</label>
-                    <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent" required minlength="10" maxlength="500"></textarea>
-                    <span id="messageError" class="text-red-600 text-sm mt-1 hidden"></span>
-                </div>
-
-                <!-- Recapcha key--
-                <div class="mb-4">
-                
-                    <div class="g-recaptcha" data-sitekey="6LeqEA0rAAAAAG7hyDz0gwFben9hVKIil-D0lgbk"></div>
-                    <span id="recaptchaError" class="text-red-600 text-sm mt-1 hidden"></span> <!-- Span para erro do reCAPTCHA 
-                </div> -->
-
-                <!-- Campos ocultos para Formspree -->
-                <input type="hidden" name="_subject" value="Nova Mensagem do Site BethelClima!">
-                <input type="text" name="_gotcha" style="display:none">
-
-                <div class="flex justify-end gap-4 mt-6">
-                    <button type="button" id="closeModal" class="px-8 py-2 text-black bg-gray-300 rounded cursor-pointer hover:bg-gray-400">
-                        Cancelar
-                    </button>
-                    <button type="submit" id="submitButton" class="px-8 py-2 bg-green-600 text-white rounded cursor-pointer hover:bg-green-700">
-                        Enviar
-                    </button>
-                </div>
-                <p id="formStatus" class="text-center mt-4 text-sm"></p>
-            </form>
-        </div>
-    </div>
 
 <!-- Footer -->
 <footer class="pt-10 bg-gray-200 text-black relative">
