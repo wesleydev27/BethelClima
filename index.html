@@ -17,12 +17,14 @@
     <!-- tailwind css cdn -->
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
+    <!--Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!--Aos Animation-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <!--CSS fechadura ES-->
     <link rel="stylesheet" href="assets/css/fechaduES.css">
 
@@ -38,7 +40,7 @@
     <header class="bg-white text-black shadow-md sticky top-0 left-0 w-full h-18 z-50" id="header">
 
         <!--Menu nav-->
-        <nav class="md:max-w-6xl mx-auto flex items-center justify-between py-2" >
+        <nav class="md:max-w-6xl mx-auto flex items-center justify-between py-2">
 
             <!--Logo-->
             <h1 class=" mx-auto md:mx-0 order-2 md:order-2">
@@ -64,68 +66,71 @@
             </ul>
 
             <!-- Menu mobile Overlay (com fundo escurecido) -->
-<div id="mobileMenu"
-class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-300 ease-in-out">
-<!-- O próprio overlay que escurece a página -->
+            <div id="mobileMenu"
+                class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-300 ease-in-out">
+                <!-- O próprio overlay que escurece a página -->
 
-<!-- Menu Drawer (o painel que desliza) -->
-<div id="mobileMenuDrawer"
-    class="absolute top-0 left-0 w-full max-w-xs h-full bg-white dark:bg-gray-900 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
+                <!-- Menu Drawer (o painel que desliza) -->
+                <div id="mobileMenuDrawer"
+                    class="absolute top-0 left-0 w-full max-w-xs h-full bg-white dark:bg-gray-900 shadow-xl transform -translate-x-full transition-transform duration-300 ease-in-out">
 
-    <!-- Cabeçalho do Menu -->
-    <div class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
-        <!-- Logo (Opcional: Use o mesmo ID 'logo' se quiser que o JS o alterne, ou um novo ID) -->
-        <a href="/" class="h-10"> <!-- Ajuste href e altura se necessário -->
-            <img id="mobileMenuLogo" src="assets/img/Logos/logo-dark.svg" alt="Bethel" class="h-full w-auto">
-           
-        </a>
-        <!-- Botão Fechar -->
-        <button id="closeMobileMenu" class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 p-2 -mr-2"> 
-            <span class="sr-only">Fechar menu</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-    </div>
+                    <!-- Cabeçalho do Menu -->
+                    <div class="flex justify-between items-center p-4 border-b border-gray-200 dark:border-gray-700">
+                        <!-- Logo (Opcional: Use o mesmo ID 'logo' se quiser que o JS o alterne, ou um novo ID) -->
+                        <a href="/" class="h-10"> <!-- Ajuste href e altura se necessário -->
+                            <img id="mobileMenuLogo" src="assets/img/Logos/logo-dark.svg" alt="Bethel"
+                                class="h-full w-auto">
 
-    <!-- Itens do Menu -->
-    <ul class="flex flex-col py-4"> <!-- Removido gap, mt, px. Adicionado py -->
-        <li>
-            <a href="#home"
-               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-              Home
-            </a>
-        </li>
+                        </a>
+                        <!-- Botão Fechar -->
+                        <button id="closeMobileMenu"
+                            class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 p-2 -mr-2">
+                            <span class="sr-only">Fechar menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
 
-        <li>
-            <a href="#fechaduras"
-               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-              Fechaduras
-            </a>
-        </li>
+                    <!-- Itens do Menu -->
+                    <ul class="flex flex-col py-4"> <!-- Removido gap, mt, px. Adicionado py -->
+                        <li>
+                            <a href="#home"
+                                class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                Home
+                            </a>
+                        </li>
 
-        <li>
-            <a href="#servicos"
-               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-               Serviços
-            </a>
-        </li>
-        <li>
-            <a href="#sobre"
-               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-               Sobre
-            </a>
-        </li>
-        <li>
-            <a href="#contato"
-               class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-               Contato
-            </a>
-        </li>
-    </ul>
-</div>
-</div>
+                        <li>
+                            <a href="#fechaduras"
+                                class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                Fechaduras
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#servicos"
+                                class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                Serviços
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sobre"
+                                class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                Sobre
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contato"
+                                class="block py-3 px-6 text-base text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
+                                Contato
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
             <!-- Container Pai MODO DARK-->
             <div class="flex items-center px-2 py-2  gap-4 order-3 md:order-3 relative">
@@ -143,11 +148,10 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
                 <div id="darkModeMessageContainer"
                     class="hidden absolute top-full right-0 mt-4 w-max max-w-xs p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 z-20"
                     role="alertdialog" aria-live="polite">
-                    
+
 
                     <!-- Texto com cor dark mode e tamanho ajustados -->
-                    <p id="darkModeMessageText"
-                        class="text-xs text-gray-800 mb-3 dark:text-gray-200">
+                    <p id="darkModeMessageText" class="text-xs text-gray-800 mb-3 dark:text-gray-200">
                         <!-- O texto da mensagem irá aqui -->
                     </p>
 
@@ -161,7 +165,7 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
                             class="px-3 py-1 bg-gray-200 hover:bg-gray-300 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-800 dark:text-gray-100 text-xs font-medium rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">Cancelar</button>
                     </div>
                 </div>
-            </div> 
+            </div>
             <!-- Fim do Container Pai do botão toggle -->
 
         </nav>
@@ -242,7 +246,8 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
                 <p class="mt-2">Projetos elétricos para residências e empresas.</p>
 
                 <!--BOTÃO WHATSAPP-->
-                <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Instala%C3%A7%C3%B5es%20El%C3%A9tricas." target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Instala%C3%A7%C3%B5es%20El%C3%A9tricas."
+                    target="_blank" rel="noopener noreferrer"
                     class="mt-6 px-6 py-3 rounded-full flex justify-center text-white bg-green-600 hover:bg-green-800">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                         fill="currentColor" class="mr-2">
@@ -261,7 +266,8 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
                 <p class="mt-2">Executamos projetos de automação para residências e empresas.</p>
 
                 <!--BOTÃO WHATSAPP-->
-                <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Automa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Automa%C3%A7%C3%A3o."
+                    target="_blank" rel="noopener noreferrer"
                     class="mt-6 px-6 py-3 rounded-full flex justify-center text-white bg-green-600 hover:bg-green-800">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                         fill="currentColor" class="mr-2">
@@ -279,7 +285,8 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
                 <h3 class="text-2xl font-semibold">Climatização</h3>
                 <p class="mt-2">Instalação e manutenção de ar-condicionado.</p>
                 <!--BOTÃO WHATSAPP-->
-                <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Climatiza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Climatiza%C3%A7%C3%A3o."
+                    target="_blank" rel="noopener noreferrer"
                     class="mt-6 px-6 py-3 rounded-full flex justify-center text-white bg-green-600 hover:bg-green-800">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                         fill="currentColor" class="mr-2">
@@ -293,587 +300,769 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
     </section>
 
 
-<!-- Seção de Fechaduras Eletrônicas Elsys -->
-<section
-    id="fechaduras-eletronicas"
-    class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
-    style="background-image: url('assets/img/backgrounds/bk02.png');">
->
+    <!-- Seção de Fechaduras Eletrônicas Elsys -->
+    <section id="fechaduras-eletronicas" class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
+        style="background-image: url('assets/img/backgrounds/bk02.png');">
+        >
 
-    <div class="absolute inset-0 bg-sky-950 opacity-90"></div>
+        <div class="absolute inset-0 bg-sky-950 opacity-90"></div>
 
-    <!-- Container Principal -->
-    <div class="max-w-6xl mx-auto px-4 relative z-10" id="fechaduras">
-        <!-- Layout Flexível -->
-        <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
+        <!-- Container Principal -->
+        <div class="max-w-6xl mx-auto px-4 relative z-10" id="fechaduras">
+            <!-- Layout Flexível -->
+            <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
 
-            <!-- Coluna do Texto e Botões -->
-            <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
-            <div class="w-full md:w-1/2 text-center md:text-left"
-                 data-aos="fade-down"
-                 data-aos-duration="1000">
-                <!-- Título Responsivo -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Fechaduras Eletrônicas Elsys
-                </h2>
-                <!-- Parágrafo Responsivo -->
-                <p class="text-lg mb-6">
-                    Segurança para você, sua família e sua empresa.
-                </p>
+                <!-- Coluna do Texto e Botões -->
+                <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
+                <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-down" data-aos-duration="1000">
+                    <!-- Título Responsivo -->
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Fechaduras Eletrônicas Elsys
+                    </h2>
+                    <!-- Parágrafo Responsivo -->
+                    <p class="text-lg mb-6">
+                        Segurança para você, sua família e sua empresa.
+                    </p>
 
-                <!-- Subtítulo -->
-                <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Digitais:</h3>
-                <!-- Lista com Ícones -->
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Sobrepor</span>
-                    </li>
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Embutir</span>
-                    </li>
-                </ul>
+                    <!-- Subtítulo -->
+                    <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Digitais:</h3>
+                    <!-- Lista com Ícones -->
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Sobrepor</span>
+                        </li>
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Embutir</span>
+                        </li>
+                    </ul>
 
-                <p class="mt-8 mb-8">
-                    Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
-                </p>
+                    <p class="mt-8 mb-8">
+                        Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma
+                        correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
+                    </p>
 
-                <!-- Botões de Ação Responsivos -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                    <!-- BOTÃO ORCAMENTO -->
-                    <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica." target="_blank" rel="noopener noreferrer"
-                       class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Solicitar Instalação
-                    </a>
-                    <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                    <!-- Botões de Ação Responsivos -->
+                    <div
+                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <!-- BOTÃO ORCAMENTO -->
+                        <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica."
+                            target="_blank" rel="noopener noreferrer"
+                            class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Solicitar Instalação
+                        </a>
+                        <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                    </div>
                 </div>
-            </div>
 
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mt-8 md:mt-0"
-                 data-aos="fade-up"
-                 data-aos-duration="1000"
-                 data-aos-delay="200">
-                <img src="assets/img/backgrounds/bk03.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
-            </div>
-
-        </div>
-    </div>
- </section>
-<!-- Fim da Seção de Fechaduras eletrônicas elsys -->
-
-
-<!-- Seção de Fechaduras Eletrônicas Intelbras -->
-<section
-    id="fechaduras-eletronicas"
-    class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
-    style="background-image: url('assets/img/backgrounds/bk02.png');">
->
-
-    <div class="absolute inset-0 bg-green-900 opacity-90"></div>
-
-    <!-- Container Principal -->
-    <div class="container mx-auto px-4 relative z-10">
-
-        <!-- Layout Flexível -->
-        <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mt-8 md:mt-0"
-                 data-aos="fade-down"
-                 data-aos-duration="1000"
-                 data-aos-delay="200">
-                <img src="assets/img/backgrounds/bk04.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
-            </div>
-
-            <!-- Coluna do Texto e Botões -->
-            <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
-            <div class="w-full md:w-1/2 text-center md:text-left"
-                 data-aos="fade-up"
-                 data-aos-duration="1000">
-                <!-- Título Responsivo -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Fechaduras Eletrônicas Intelbras
-                </h2>
-                <!-- Parágrafo Responsivo -->
-                <p class="text-lg mb-6">
-                    A qualidade e a confiança que a intelbras te oferece.
-                </p>
-
-                <!-- Subtítulo -->
-                <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Intelbras:</h3>
-                <!-- Lista com Ícones -->
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Sobrepor</span>
-                    </li>
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Embutir</span>
-                    </li>
-                </ul>
-
-                <p class="mt-8 mb-8">
-                    Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
-                </p>
-
-                <!-- Botões de Ação Responsivos -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                    <!-- BOTÃO ORCAMENTO -->
-                    <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica." target="_blank" rel="noopener noreferrer"
-                       class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Solicitar Instalação
-                    </a>
-                    <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="assets/img/backgrounds/bk03.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
                 </div>
+
             </div>
-
         </div>
-    </div>
- </section>
-<!-- Fim da Seção de Fechaduras eletrônicas Intelbras -->
+    </section>
+    <!-- Fim da Seção de Fechaduras eletrônicas elsys -->
 
 
-<!-- Seção de Fechaduras Eletrônicas pado -->
-<section
-    id="fechaduras-eletronicas"
-    class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
-    style="background-image: url('assets/img/backgrounds/bk02.png');">
->
+    <!-- Seção de Fechaduras Eletrônicas Intelbras -->
+    <section id="fechaduras-eletronicas" class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
+        style="background-image: url('assets/img/backgrounds/bk02.png');">
+        >
 
-    <div class="absolute inset-0 bg-green-950 opacity-90"></div>
+        <div class="absolute inset-0 bg-green-900 opacity-90"></div>
 
-    <!-- Container Principal -->
-    <div class="max-w-6xl mx-auto px-4 relative z-10">
-        <!-- Layout Flexível -->
-        <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
+        <!-- Container Principal -->
+        <div class="container mx-auto px-4 relative z-10">
 
-            <!-- Coluna do Texto e Botões -->
-            <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
-            <div class="w-full md:w-1/2 text-center md:text-left"
-                 data-aos="fade-up"
-                 data-aos-duration="1000">
-                <!-- Título Responsivo -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Fechaduras Eletrônicas Pado
-                </h2>
-                <!-- Parágrafo Responsivo -->
-                <p class="text-lg mb-6">
-                    Pensou em segurança pensou em Pado.
-                </p>
-
-                <!-- Subtítulo -->
-                <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Pado:</h3>
-                <!-- Lista com Ícones -->
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Sobrepor</span>
-                    </li>
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Embutir</span>
-                    </li>
-                </ul>
-
-                <p class="mt-8 mb-8">
-                    Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
-                </p>
-
-                <!-- Botões de Ação Responsivos -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                    <!-- BOTÃO ORCAMENTO -->
-                    <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica." target="_blank" rel="noopener noreferrer"
-                       class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Solicitar Instalação
-                    </a>
-                    <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+            <!-- Layout Flexível -->
+            <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="assets/img/backgrounds/bk04.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
                 </div>
-            </div>
 
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mt-8 md:mt-0"
-                 data-aos="fade-down"
-                 data-aos-duration="1000"
-                 data-aos-delay="200">
-                <img src="assets/img/backgrounds/bk05.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
-            </div>
+                <!-- Coluna do Texto e Botões -->
+                <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
+                <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Título Responsivo -->
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Fechaduras Eletrônicas Intelbras
+                    </h2>
+                    <!-- Parágrafo Responsivo -->
+                    <p class="text-lg mb-6">
+                        A qualidade e a confiança que a intelbras te oferece.
+                    </p>
 
-        </div>
-    </div>
- </section>
-<!-- Fim da Seção de Fechaduras eletrônicas Pado -->
+                    <!-- Subtítulo -->
+                    <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Intelbras:</h3>
+                    <!-- Lista com Ícones -->
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Sobrepor</span>
+                        </li>
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Embutir</span>
+                        </li>
+                    </ul>
 
+                    <p class="mt-8 mb-8">
+                        Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma
+                        correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
+                    </p>
 
-<!-- Seção de Fechaduras Eletrônicas yale -->
-<section
-    id="fechaduras-eletronicas"
-    class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
-    style="background-image: url('assets/img/backgrounds/bk02.png');">
->
-
-    <div class="absolute inset-0 bg-yellow-700 opacity-90"></div>
-
-    <!-- Container Principal -->
-    <div class="max-w-6xl mx-auto px-4 relative z-10">
-        <!-- Layout Flexível -->
-        <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
-
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mt-8 md:mt-0"
-                 data-aos="fade-down"
-                 data-aos-duration="1000"
-                 data-aos-delay="200">
-                <img src="assets/img/backgrounds/bk06.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
-            </div>
-
-            <!-- Coluna do Texto e Botões -->
-            <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
-            <div class="w-full md:w-1/2 text-center md:text-left"
-                 data-aos="fade-up"
-                 data-aos-duration="1000">
-                <!-- Título Responsivo -->
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">
-                    Fechaduras Eletrônicas Yale
-                </h2>
-                <!-- Parágrafo Responsivo -->
-                <p class="text-lg mb-6">
-                    Yale oferece uma ampla gama de fechaduras eletrônicas.
-                </p>
-
-                <!-- Subtítulo -->
-                <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Yale:</h3>
-                <!-- Lista com Ícones -->
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Sobrepor</span>
-                    </li>
-                    <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de Fechaduras Digitais de Embutir</span>
-                    </li>
-                </ul>
-
-                <p class="mt-8 mb-8">
-                    Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
-                </p>
-
-                <!-- Botões de Ação Responsivos -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                    <!-- BOTÃO ORCAMENTO -->
-                    <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica." target="_blank" rel="noopener noreferrer"
-                       class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Solicitar Instalação
-                    </a>
-                    <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                    <!-- Botões de Ação Responsivos -->
+                    <div
+                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <!-- BOTÃO ORCAMENTO -->
+                        <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica."
+                            target="_blank" rel="noopener noreferrer"
+                            class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Solicitar Instalação
+                        </a>
+                        <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
-    </div>
- </section>
-<!-- Fim da Seção de Fechaduras eletrônicas Yale-->
+    </section>
+    <!-- Fim da Seção de Fechaduras eletrônicas Intelbras -->
+
+
+    <!-- Seção de Fechaduras Eletrônicas pado -->
+    <section id="fechaduras-eletronicas" class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
+        style="background-image: url('assets/img/backgrounds/bk02.png');">
+        >
+
+        <div class="absolute inset-0 bg-green-950 opacity-90"></div>
+
+        <!-- Container Principal -->
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <!-- Layout Flexível -->
+            <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
+
+                <!-- Coluna do Texto e Botões -->
+                <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
+                <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Título Responsivo -->
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Fechaduras Eletrônicas Pado
+                    </h2>
+                    <!-- Parágrafo Responsivo -->
+                    <p class="text-lg mb-6">
+                        Pensou em segurança pensou em Pado.
+                    </p>
+
+                    <!-- Subtítulo -->
+                    <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Pado:</h3>
+                    <!-- Lista com Ícones -->
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Sobrepor</span>
+                        </li>
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Embutir</span>
+                        </li>
+                    </ul>
+
+                    <p class="mt-8 mb-8">
+                        Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma
+                        correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
+                    </p>
+
+                    <!-- Botões de Ação Responsivos -->
+                    <div
+                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <!-- BOTÃO ORCAMENTO -->
+                        <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica."
+                            target="_blank" rel="noopener noreferrer"
+                            class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Solicitar Instalação
+                        </a>
+                        <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                    </div>
+                </div>
+
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="assets/img/backgrounds/bk05.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Fim da Seção de Fechaduras eletrônicas Pado -->
+
+
+    <!-- Seção de Fechaduras Eletrônicas yale -->
+    <section id="fechaduras-eletronicas" class="py-20 bg-fixed bg-center bg-cover px-4 lg:px-8 relative text-white"
+        style="background-image: url('assets/img/backgrounds/bk02.png');">
+        >
+
+        <div class="absolute inset-0 bg-yellow-700 opacity-90"></div>
+
+        <!-- Container Principal -->
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <!-- Layout Flexível -->
+            <div class="flex justify-end flex-col md:flex-row items-center md:space-x-12">
+
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="assets/img/backgrounds/bk06.png" alt="Fechadura Eletrônica Instalada" class=" mx-auto">
+                </div>
+
+                <!-- Coluna do Texto e Botões -->
+                <!-- Adicionando data-aos="fade-left" para animar a coluna inteira -->
+                <div class="w-full md:w-1/2 text-center md:text-left" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Título Responsivo -->
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Fechaduras Eletrônicas Yale
+                    </h2>
+                    <!-- Parágrafo Responsivo -->
+                    <p class="text-lg mb-6">
+                        Yale oferece uma ampla gama de fechaduras eletrônicas.
+                    </p>
+
+                    <!-- Subtítulo -->
+                    <h3 class="text-2xl font-semibold mb-3">Serviço de Instalação de Fechaduras Yale:</h3>
+                    <!-- Lista com Ícones -->
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Sobrepor</span>
+                        </li>
+                        <li class="inline-flex md:flex items-start justify-center md:justify-start w-full">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 flex-shrink-0 mt-1 text-yellow-500" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de Fechaduras Digitais de Embutir</span>
+                        </li>
+                    </ul>
+
+                    <p class="mt-8 mb-8">
+                        Optar pela instalação profissional garante que sua fechadura digital seja configurada da forma
+                        correta, reduzindo significativamente as chances de erros ou problemas no funcionamento.
+                    </p>
+
+                    <!-- Botões de Ação Responsivos -->
+                    <div
+                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <!-- BOTÃO ORCAMENTO -->
+                        <a href="https://wa.me/55SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20instala%C3%A7%C3%A3o%20de%20fechadura%20eletr%C3%B4nica."
+                            target="_blank" rel="noopener noreferrer"
+                            class="font-medium inline-flex items-center justify-center text-sky-950 px-6 py-3 bg-yellow-500 hover:opacity-90 hover:text-sky-950 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-600 rounded-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Solicitar Instalação
+                        </a>
+                        <!-- Pode adicionar mais botões aqui seguindo o mesmo padrão -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Fim da Seção de Fechaduras eletrônicas Yale-->
 
     <!-- Seção de Serviços Elétricos -->
-<section id="eletrica" class="py-16 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 relative z-10">
-        <div class="flex flex-col md:flex-row items-center md:space-x-12">
+    <section id="eletrica" class="py-16 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
 
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <img src="assets/img/backgrounds/06.png" alt="Serviços Elétricos Profissionais"
-                     class="w-full h-auto  object-cover max-h-[500px]">
-                     <!-- Ajuste max-h-[500px] conforme necessário -->
-            </div>
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="assets/img/backgrounds/06.png" alt="Serviços Elétricos Profissionais"
+                        class="w-full h-auto  object-cover max-h-[500px]">
+                    <!-- Ajuste max-h-[500px] conforme necessário -->
+                </div>
 
-            <!-- Coluna do Texto e Botões -->
-            <div class="md:w-1/2 text-gray-700" >
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4" >
-                    Soluções Completas em Elétrica
-                </h2>
-                <p class="text-lg mb-6">
-                    Oferecemos uma gama completa de serviços elétricos para residências, comércios e indústrias. Nossa equipe qualificada garante segurança, eficiência e conformidade com as normas técnicas em todos os projetos.
-                </p>
+                <!-- Coluna do Texto e Botões -->
+                <div class="md:w-1/2 text-gray-700">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Soluções Completas em Elétrica
+                    </h2>
+                    <p class="text-lg mb-6">
+                        Oferecemos uma gama completa de serviços elétricos para residências, comércios e indústrias.
+                        Nossa equipe qualificada garante segurança, eficiência e conformidade com as normas técnicas em
+                        todos os projetos.
+                    </p>
 
-                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Nossos Serviços Incluem:</h3>
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalações elétricas residenciais e prediais completas.</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Projetos elétricos e adequação às normas (NBR 5410).</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Manutenção elétrica preventiva e corretiva.</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Montagem e reforma de quadros de distribuição (QDC).</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de luminárias, tomadas, interruptores e sensores.</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Sistemas de aterramento e proteção contra surtos (DPS).</span>
-                    </li>
-                </ul>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Nossos Serviços Incluem:</h3>
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalações elétricas residenciais e prediais completas.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Projetos elétricos e adequação às normas (NBR 5410).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Manutenção elétrica preventiva e corretiva.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Montagem e reforma de quadros de distribuição (QDC).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de luminárias, tomadas, interruptores e sensores.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Sistemas de aterramento e proteção contra surtos (DPS).</span>
+                        </li>
+                    </ul>
 
-                <p class="mb-8">
-                    Precisa de um orçamento ou tem alguma dúvida? Entre em contato conosco!
-                </p>
+                    <p class="mb-8">
+                        Precisa de um orçamento ou tem alguma dúvida? Entre em contato conosco!
+                    </p>
 
-                <!-- Botões de Ação -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <!-- BOTÃO WHATSAPP -->
-                    <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20servi%C3%A7os%20el%C3%A9tricos." target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Orçamento via WhatsApp
-                    </a>
+                    <!-- Botões de Ação -->
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <!-- BOTÃO WHATSAPP -->
+                        <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20servi%C3%A7os%20el%C3%A9tricos."
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Orçamento via WhatsApp
+                        </a>
 
-                     <!-- Botão Secundário (Ex: Ver Mais Detalhes ou Ligar) -->
-                     <!-- <a href="#contato" 
+                        <!-- Botão Secundário (Ex: Ver Mais Detalhes ou Ligar) -->
+                        <!-- <a href="#contato" 
                         class="inline-flex items-center justify-center px-6 py-3 rounded-full text-blue-600 bg-white border border-blue-600 hover:bg-blue-50 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                          Ver Mais Serviços
                      </a> -->
-                     <!-- Descomente e ajuste o botão secundário se precisar -->
+                        <!-- Descomente e ajuste o botão secundário se precisar -->
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Fim da Seção de Serviços Elétricos -->
+    </section>
+    <!-- Fim da Seção de Serviços Elétricos -->
 
-<!-- Seção de Serviços de Automação -->
-<section id="automacao" class="py-16 bg-white "> <!-- Adicionado dark:bg-gray-900 para fundo escuro -->
-    <div class="max-w-6xl mx-auto px-4 relative z-10">
-        <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse">
+    <!-- Seção de Serviços de Automação -->
+    <section id="automacao" class="py-16 bg-white "> <!-- Adicionado dark:bg-gray-900 para fundo escuro -->
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row-reverse items-center md:space-x-12 md:space-x-reverse">
 
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <img src="assets/img/backgrounds/07.png" alt="Automação Residencial e Predial Inteligente"
-                     class="w-full h-auto object-cover max-h-[500px]">
-            </div>
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="assets/img/backgrounds/07.png" alt="Automação Residencial e Predial Inteligente"
+                        class="w-full h-auto object-cover max-h-[500px]">
+                </div>
 
-            <!-- Coluna do Texto e Botões -->
-            <!-- Adicionadas classes dark:text-... para contraste -->
-            <div class="md:w-1/2 text-gray-700 ">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800  mb-4">
-                    Automação Inteligente para seu Conforto e Segurança
-                </h2>
-                <p class="text-lg mb-6">
-                    Transforme sua casa ou empresa em um ambiente inteligente e conectado. Nossas soluções de automação proporcionam maior conforto, praticidade, segurança e eficiência energética, controlados na palma da sua mão.
-                </p>
+                <!-- Coluna do Texto e Botões -->
+                <!-- Adicionadas classes dark:text-... para contraste -->
+                <div class="md:w-1/2 text-gray-700 ">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800  mb-4">
+                        Automação Inteligente para seu Conforto e Segurança
+                    </h2>
+                    <p class="text-lg mb-6">
+                        Transforme sua casa ou empresa em um ambiente inteligente e conectado. Nossas soluções de
+                        automação proporcionam maior conforto, praticidade, segurança e eficiência energética,
+                        controlados na palma da sua mão.
+                    </p>
 
-                <h3 class="text-2xl font-semibold text-gray-800  mb-3">
-                    O que Oferecemos em Automação:
-                </h3>
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"> {/* Ícone ajustado para dark mode */}
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Projeto e instalação de sistemas de automação residencial (casas inteligentes).</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor"> {/* Ícone ajustado para dark mode */}
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Controle de iluminação inteligente (cenas, dimerização, agendamentos).</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Automação de cortinas, persianas e toldos.</span>
-                    </li>
-                  
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Controle de climatização (ar condicionado, aquecedores).</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Sistemas de som ambiente e home theater integrados.</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Integração com assistentes de voz (Alexa, Google Assistente, Siri).</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Soluções de segurança automatizada (fechaduras, câmeras, sensores).</span>
-                    </li>
-                </ul>
+                    <h3 class="text-2xl font-semibold text-gray-800  mb-3">
+                        O que Oferecemos em Automação:
+                    </h3>
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor"> {/* Ícone ajustado para dark mode */}
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Projeto e instalação de sistemas de automação residencial (casas inteligentes).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor"> {/* Ícone ajustado para dark mode */}
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Controle de iluminação inteligente (cenas, dimerização, agendamentos).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Automação de cortinas, persianas e toldos.</span>
+                        </li>
 
-                <p class="mb-8">
-                    Interessado em modernizar seu espaço com automação? Fale conosco e solicite um projeto personalizado!
-                </p>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Controle de climatização (ar condicionado, aquecedores).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Sistemas de som ambiente e home theater integrados.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Integração com assistentes de voz (Alexa, Google Assistente, Siri).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-1"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Soluções de segurança automatizada (fechaduras, câmeras, sensores).</span>
+                        </li>
+                    </ul>
 
-                <!-- Botões de Ação (o botão verde com texto branco geralmente funciona bem em ambos os modos) -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-offset-gray-900">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Orçamento para Automação
-                    </a>
+                    <p class="mb-8">
+                        Interessado em modernizar seu espaço com automação? Fale conosco e solicite um projeto
+                        personalizado!
+                    </p>
+
+                    <!-- Botões de Ação (o botão verde com texto branco geralmente funciona bem em ambos os modos) -->
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20tenho%20interesse%20em%20um%20or%C3%A7amento%20para%20automa%C3%A7%C3%A3o."
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 dark:focus:ring-offset-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Orçamento para Automação
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Fim da Seção de Serviços de Automação -->
+    </section>
+    <!-- Fim da Seção de Serviços de Automação -->
 
 
-<!-- Seção de Serviços de Climatização -->
-<section id="climatizacao" class="py-16 bg-gray-50"> <!-- Voltando para bg-gray-50 para alternar -->
-    <div class="max-w-6xl mx-auto px-4 relative z-10">
-        <div class="flex flex-col md:flex-row items-center md:space-x-12">
-            <!-- Voltando para md:flex-row (imagem à esquerda) -->
+    <!-- Seção de Serviços de Climatização -->
+    <section id="climatizacao" class="py-16 bg-gray-80">
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center md:space-x-12">
+                <!-- Voltando para md:flex-row (imagem à esquerda) -->
 
-            <!-- Coluna da Imagem -->
-            <div class="md:w-1/2 mb-8 md:mb-0">
-                <img src="assets/img/backgrounds/08.png" alt="Instalação e Manutenção de Ar Condicionado"
-                     class="w-full h-auto object-cover max-h-[500px]">
-                     <!-- Ajuste max-h-[500px] conforme necessário -->
-            </div>
+                <!-- Coluna da Imagem -->
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="assets/img/backgrounds/08.png" alt="Instalação e Manutenção de Ar Condicionado"
+                        class="w-full h-auto object-cover max-h-[500px]">
+                    <!-- Ajuste max-h-[500px] conforme necessário -->
+                </div>
 
-            <!-- Coluna do Texto e Botões -->
-            <div class="md:w-1/2 text-gray-700">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Climatização Ideal para seu Conforto Térmico
-                </h2>
-                <p class="text-lg mb-6">
-                    Garantimos o conforto térmico ideal para seu lar ou negócio com soluções completas em climatização. Oferecemos instalação, manutenção e projetos de sistemas de ar condicionado eficientes e adequados às suas necessidades.
-                </p>
+                <!-- Coluna do Texto e Botões -->
+                <div class="md:w-1/2 text-gray-700">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+                        Climatização Ideal para seu Conforto Térmico
+                    </h2>
+                    <p class="text-lg mb-6">
+                        Garantimos o conforto térmico ideal para seu lar ou negócio com soluções completas em
+                        climatização. Oferecemos instalação, manutenção e projetos de sistemas de ar condicionado
+                        eficientes e adequados às suas necessidades.
+                    </p>
 
-                <h3 class="text-2xl font-semibold text-gray-800 mb-3">Serviços de Climatização Oferecidos:</h3>
-                <ul class="list-none space-y-2 mb-8">
-                    <li class="flex items-start">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Instalação de ar condicionado (Split, Janela, Cassete, Piso-Teto, Central).</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Manutenção preventiva periódica (limpeza, higienização, verificação).</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Manutenção corretiva e reparos em geral.</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Cálculo de carga térmica e dimensionamento de equipamentos.</span>
-                    </li>
-                    <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Preparação de infraestrutura (tubulação de cobre, dreno, ponto elétrico).</span>
-                    </li>
-                     <li class="flex items-start">
-                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                        </svg>
-                        <span>Consultoria para escolha do melhor sistema de climatização.</span>
-                    </li>
-                </ul>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">Serviços de Climatização Oferecidos:</h3>
+                    <ul class="list-none space-y-2 mb-8">
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Instalação de ar condicionado (Split, Janela, Cassete, Piso-Teto, Central).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Manutenção preventiva periódica (limpeza, higienização, verificação).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Manutenção corretiva e reparos em geral.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Cálculo de carga térmica e dimensionamento de equipamentos.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Preparação de infraestrutura (tubulação de cobre, dreno, ponto elétrico).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2 text-blue-600 flex-shrink-0 mt-1" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>Consultoria para escolha do melhor sistema de climatização.</span>
+                        </li>
+                    </ul>
 
-                <p class="mb-8">
-                    Mantenha seu ambiente sempre na temperatura ideal. Peça já seu orçamento para instalação ou manutenção!
-                </p>
+                    <p class="mb-8">
+                        Mantenha seu ambiente sempre na temperatura ideal. Peça já seu orçamento para instalação ou
+                        manutenção!
+                    </p>
 
-                <!-- Botões de Ação -->
-                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <!-- BOTÃO WHATSAPP -->
-                    <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Climatiza%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer"
-                       class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="mr-2">
-                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
-                        </svg>
-                        Orçamento para Climatização
-                    </a>
+                    <!-- Botões de Ação -->
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <!-- BOTÃO WHATSAPP -->
+                        <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20para%20Climatiza%C3%A7%C3%A3o."
+                            target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-green-600 hover:bg-green-700 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="currentColor" class="mr-2">
+                                <path
+                                    d="M12 0C5.373 0 0 5.373 0 12c0 2.088.547 4.059 1.584 5.799L.049 24l6.354-1.501A11.959 11.959 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22.092a9.978 9.978 0 0 1-5.078-1.373l-.364-.216-3.773.89.829-3.507-.24-.388A9.939 9.939 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.506-7.425c-.291-.146-1.723-.854-1.99-.949-.266-.098-.462-.146-.657.146-.196.292-.754.949-.925 1.146-.17.195-.34.22-.63.073-1.715-.854-2.845-1.524-3.986-3.437-.3-.512.3-.476.854-1.586.095-.195.048-.365-.025-.511-.073-.146-.657-1.59-.899-2.185-.237-.57-.479-.49-.657-.499-.172-.008-.37-.01-.568-.01a1.105 1.105 0 0 0-.803.366c-.267.292-1.014.993-1.014 2.419s1.038 2.805 1.182 2.998c.146.195 2.036 3.108 4.937 4.355.689.298 1.226.475 1.646.608.692.22 1.32.189 1.816.114.554-.082 1.723-.704 1.967-1.385.243-.682.243-1.267.17-1.385-.073-.122-.267-.195-.558-.34z" />
+                            </svg>
+                            Orçamento para Climatização
+                        </a>
 
-                     <!-- Botão secundário opcional -->
-                     <!-- <a href="#contato"
+                        <!-- Botão secundário opcional -->
+                        <!-- <a href="#contato"
                         class="inline-flex items-center justify-center px-6 py-3 rounded-full text-blue-600 bg-white border border-blue-600 hover:bg-blue-50 transition duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                          Agendar Manutenção
                      </a> -->
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Fim da Seção de Serviços de Climatização -->
+    </section>
+    <!-- Fim da Seção de Serviços de Climatização -->
+
+
+
+    <!-- Seção de estrutura de climatização -->
+    <section id="estrutura" class="py-10 bg-gradient-to-r from-sky-950 to-black  px-4 sm:px-6 lg:px-8 relative">
+        <!--style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0)), url('assets/img/backgrounds/bk1.png'); background-size: cover;"> -->
+
+        <h2 class=" text-white text-center text-3xl sm:text-4xl lg:text-5xl font-bold mt-16 mb-8 relative
+        after:content-[''] after:block after:w-24 after:h-1.5 after:bg-sky-500 after:mx-auto after:mt-2"
+            data-aos="fade-up" data-aos-duration="1000">
+            Estrutura de Climatização
+        </h2>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+                <!-- Card Residencial -->
+                <div class="bg-stone-800/70 cursor-pointer p-6 sm:p-8 rounded-lg shadow-lg border border-gray-600 text-gray-200 hover:border-sky-500 hover:shadow-xl flex flex-col items-center md:items-start text-center md:text-left hover:bg-stone-700/70"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    <div class="mb-4 text-black flex justify-center w-full md:justify-start">
+                        <i class="fas fa-home fa-lg bg-sky-500 rounded-xl p-4 shadow-md"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-gray-100">
+                            Estrutura de Climatização Residencial
+                        </h3>
+                        <p class="text-sm sm:text-base text-gray-300">
+                            Nossa estrutura de climatização residencial é projetada para oferecer conforto e eficiência.
+                            Com sistemas de ar condicionado modernos e bem dimensionados, garantimos um ambiente
+                            agradável em todas as estações do ano.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Comercial -->
+                <div class="bg-stone-800/70 cursor-pointer p-6 sm:p-8 rounded-lg shadow-lg border border-gray-600 text-gray-200 hover:border-sky-500 hover:shadow-xl flex flex-col items-center md:items-start text-center md:text-left hover:bg-stone-700/70"
+                    data-aos="fade-up" data-aos-duration="1000">
+                    <div class="mb-4 text-black flex justify-center w-full md:justify-start">
+                        <i class="fas fa-building fa-lg bg-sky-500 rounded-xl p-4 shadow-md"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-semibold mb-4 text-gray-100">
+                            Estrutura de Climatização Comercial
+                        </h3>
+                        <p class="text-sm sm:text-base text-gray-300">
+                            Para ambientes comerciais, oferecemos soluções de climatização que atendem às necessidades
+                            específicas de cada espaço. Nossos sistemas são projetados para garantir eficiência
+                            energética e conforto para colaboradores e clientes.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botão WhatsApp -->
+            <div class="flex justify-center mt-16">
+                <a href="https://api.whatsapp.com/send?phone=5581999999999"
+                    class="text-sm sm:text-base lg:text-lg font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-white border-b-2 border-white hover:scale-105 transition duration-300 py-3 sm:py-4 px-10 sm:px-16 rounded-full flex items-center">
+                    <i class="fab fa-whatsapp mr-2 text-lg"></i>
+                    Falar no WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Fim da Seção estrutura de climatização -->
 
 
 
@@ -892,16 +1081,18 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
                 <img src="assets/img/marcas/brastemp.png" alt="Brastemp" class="w-30 object-contain">
                 <img src="assets/img/marcas/lg_logo_PNG15.png" alt="LG" class="w-30 object-contain">
                 <img src="assets/img/marcas/14 logo-panasonic.webp" alt="Panasonic" class="w-30 object-contain">
-                <img src="assets/img/marcas/springer-removebg-preview.png" alt="Springer Midea" class="w-30 object-contain">
+                <img src="assets/img/marcas/springer-removebg-preview.png" alt="Springer Midea"
+                    class="w-30 object-contain">
                 <img src="assets/img/marcas/logo-consul-1536.png" alt="Consul" class="w-30 object-contain">
-                 <!-- Duplique as imagens para o efeito de loop infinito -->
-                 <img src="assets/img/marcas/alumbra.png" alt="Alumbra" class="w-30 object-contain">
+                <!-- Duplique as imagens para o efeito de loop infinito -->
+                <img src="assets/img/marcas/alumbra.png" alt="Alumbra" class="w-30 object-contain">
                 <img src="assets/img/marcas/samsung.png" alt="Samsung" class="w-30 object-contain">
                 <img src="assets/img/marcas/sil.png" alt="Sil Fios" class="w-30 object-contain">
                 <img src="assets/img/marcas/brastemp.png" alt="Brastemp" class="w-30 object-contain">
                 <img src="assets/img/marcas/lg_logo_PNG15.png" alt="LG" class="w-30 object-contain">
                 <img src="assets/img/marcas/14 logo-panasonic.webp" alt="Panasonic" class="w-30 object-contain">
-                <img src="assets/img/marcas/springer-removebg-preview.png" alt="Springer Midea" class="w-30 object-contain">
+                <img src="assets/img/marcas/springer-removebg-preview.png" alt="Springer Midea"
+                    class="w-30 object-contain">
                 <img src="assets/img/marcas/logo-consul-1536.png" alt="Consul" class="w-30 object-contain">
             </div>
         </div>
@@ -915,7 +1106,8 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
         <!-- Overlay com opacidade -->
         <div class="absolute inset-0 bg-violet-950 opacity-85 z-0"></div>
 
-        <div class="relative z-10 md:max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 py-16 md:py-20"> <!-- Adicionado padding vertical -->
+        <div class="relative z-10 md:max-w-6xl mx-auto flex flex-col items-center justify-center gap-8 py-16 md:py-20">
+            <!-- Adicionado padding vertical -->
             <!-- Texto -->
             <div class="text-white text-center" data-aos="fade-up" data-aos-duration="1000">
                 <h2
@@ -941,46 +1133,50 @@ class="hidden fixed inset-0 z-50 bg-violet-950/50 transition-opacity duration-30
         </div>
     </section>
 
-<!-- Footer -->
-<footer class="pt-10 bg-gray-200 text-black relative">
-    <div class="md:max-w-6xl mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Sobre -->
-        <div>
-            <!--Logo no Footer-->
-            <div class="flex items-center justify-center md:justify-start mb-4">
-                <img id="logoFooter" src="assets/img/Logos/logo-light.svg" alt="Bethel serviços - Footer" class="w-40 h-auto">
+    <!-- Footer -->
+    <footer class="pt-10 bg-gray-200 text-black relative">
+        <div class="md:max-w-6xl mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Sobre -->
+            <div>
+                <!--Logo no Footer-->
+                <div class="flex items-center justify-center md:justify-start mb-4">
+                    <img id="logoFooter" src="assets/img/Logos/logo-light.svg" alt="Bethel serviços - Footer"
+                        class="w-40 h-auto">
+                </div>
+                <p class="text-sm text-center md:text-left">
+                    A Bethel oferece soluções completas em elétrica, climatização e automação, garantindo qualidade e
+                    segurança para residências e empresas.
+                </p>
             </div>
-            <p class="text-sm text-center md:text-left">
-                A Bethel oferece soluções completas em elétrica, climatização e automação, garantindo qualidade e segurança para residências e empresas.
-            </p>
+
+            <!-- Links Rápidos -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-center md:text-left">Links Rápidos</h3>
+                <ul class="space-y-2 text-sm text-center md:text-left">
+                    <li><a href="#servicos" class="hover:text-blue-400">Serviços</a></li>
+                    <li><a href="#sobre" class="hover:text-blue-400">Sobre</a></li>
+                    <li><a href="#contato" class="hover:text-blue-400">Contato</a></li>
+                </ul>
+            </div>
+            <!-- Contato -->
+            <div>
+                <h3 class="text-lg font-bold mb-4 text-center md:text-left">Contato</h3>
+                <ul class="space-y-2 text-sm text-center md:text-left">
+                    <li><span class="font-semibold">Email:</span> bethelsrvicos9@gmail.com</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Links Rápidos -->
-        <div>
-            <h3 class="text-lg font-bold mb-4 text-center md:text-left">Links Rápidos</h3>
-            <ul class="space-y-2 text-sm text-center md:text-left">
-                <li><a href="#servicos" class="hover:text-blue-400">Serviços</a></li>
-                <li><a href="#sobre" class="hover:text-blue-400">Sobre</a></li>
-                <li><a href="#contato" class="hover:text-blue-400">Contato</a></li>
-            </ul>
+        <!-- Div de Copyright-->
+        <div class="mt-10 p-4 text-white w-full text-center text-xs bg-sky-950">
+            © 2024 BethelClima. Todos os direitos reservados. Desenvolvido por <a href="" target="_blank"
+                class="underline hover:text-yellow-300">Wesley Vaz</a>.
         </div>
-        <!-- Contato -->
-        <div>
-            <h3 class="text-lg font-bold mb-4 text-center md:text-left">Contato</h3>
-            <ul class="space-y-2 text-sm text-center md:text-left">
-                <li><span class="font-semibold">Email:</span> bethelsrvicos9@gmail.com</li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- Div de Copyright-->
-    <div class="mt-10 p-4 text-white w-full text-center text-xs bg-sky-950">
-        © 2024 BethelClima. Todos os direitos reservados. Desenvolvido por <a href="" target="_blank" class="underline hover:text-yellow-300">Wesley Vaz</a>.
-    </div>
-</footer>
+    </footer>
 
     <!-- Botão do WhatsApp -->
-    <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20visitei%20o%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank"
+    <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20visitei%20o%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+        target="_blank"
         class="fixed bottom-10 left-4 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 z-50 animate-[custom-pulse_1.5s_infinite]">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-8 h-8">
             <path
